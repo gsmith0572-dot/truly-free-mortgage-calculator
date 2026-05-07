@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useMemo, useCallback } from 'react';
-import Image from 'next/image';
+
 
 interface LoanInputs {
   homePrice: number;
@@ -258,7 +258,23 @@ export default function MortgageCalculator() {
       `}</style>
       <div className="min-h-screen bg-gray-50">
         <nav className="bg-white border-b border-gray-200 px-6 h-20 flex items-center justify-between no-print">
-          <Image src="/logo.png" alt="Truly Free Mortgage Calculator" width={400} height={80} className="h-16 w-auto" priority />
+          <div className="flex items-center gap-2.5">
+            <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="38" height="38" rx="8" fill="#2563EB"/>
+              <path d="M19 7L30 13V19C30 24.5 25.5 29.5 19 31C12.5 29.5 8 24.5 8 19V13L19 7Z" fill="white" fillOpacity="0.2"/>
+              <path d="M19 7L30 13V19C30 24.5 25.5 29.5 19 31C12.5 29.5 8 24.5 8 19V13L19 7Z" stroke="white" strokeWidth="1.5"/>
+              <rect x="13" y="18" width="12" height="9" rx="1.5" fill="white"/>
+              <rect x="15" y="20" width="3" height="2" rx="0.5" fill="#2563EB"/>
+              <rect x="20" y="20" width="3" height="2" rx="0.5" fill="#2563EB"/>
+              <rect x="15" y="23" width="3" height="2" rx="0.5" fill="#2563EB"/>
+              <rect x="20" y="23" width="3" height="2" rx="0.5" fill="#2563EB"/>
+              <path d="M16 18V15.5C16 13.6 17.3 12 19 12C20.7 12 22 13.6 22 15.5V18" stroke="white" strokeWidth="1.5" strokeLinecap="round"/>
+            </svg>
+            <div className="leading-tight">
+              <div className="text-base font-bold text-gray-900 tracking-tight">Truly Free</div>
+              <div className="text-base font-bold text-blue-600 tracking-tight -mt-0.5">Mortgage Calculator</div>
+            </div>
+          </div>
           <div className="flex gap-6">
             {['Calculator','Compare','Blog'].map((l) => (
               <button key={l} onClick={() => l === 'Compare' ? setMode('scenario') : setMode('standard')}
