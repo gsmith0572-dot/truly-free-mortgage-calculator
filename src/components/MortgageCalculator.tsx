@@ -260,8 +260,10 @@ export default function MortgageCalculator() {
           <img src="/logo.png" alt="Truly Free Mortgage Calculator" style={{ height: '60px', width: 'auto', objectFit: 'contain', objectPosition: 'left center' }} />
           <div className="flex gap-6">
             {['Calculator','Compare','Blog'].map((l) => (
-              <button key={l} onClick={() => l === 'Compare' ? setMode('scenario') : setMode('standard')}
-                className={"text-sm transition-colors " + ((l === 'Calculator' && mode === 'standard') || (l === 'Compare' && mode === 'scenario') ? 'text-blue-600 font-medium' : 'text-gray-500 hover:text-gray-700')}>{l}</button>
+              l === 'Blog'
+                ? <a key={l} href="/blog/fha-mortgage-calculator" className="text-sm text-gray-500 hover:text-gray-700">{l}</a>
+                : <button key={l} onClick={() => l === 'Compare' ? setMode('scenario') : setMode('standard')}
+                    className={"text-sm transition-colors " + ((l === 'Calculator' && mode === 'standard') || (l === 'Compare' && mode === 'scenario') ? 'text-blue-600 font-medium' : 'text-gray-500 hover:text-gray-700')}>{l}</button>
             ))}
           </div>
         </nav>
