@@ -258,7 +258,7 @@ export default function MortgageCalculator() {
       `}</style>
       <div className="min-h-screen bg-gray-50">
         <nav className="bg-white border-b border-gray-200 px-6 h-14 flex items-center justify-between no-print">
-          <Image src="/logo.png" alt="Truly Free Mortgage Calculator" width={180} height={36} className="h-9 w-auto" priority />
+          <Image src="/logo.png" alt="Truly Free Mortgage Calculator" width={280} height={56} className="h-12 w-auto" priority />
           <div className="flex gap-6">
             {['Calculator','Compare','Blog'].map((l) => (
               <button key={l} onClick={() => l === 'Compare' ? setMode('scenario') : setMode('standard')}
