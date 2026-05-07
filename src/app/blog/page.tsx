@@ -55,7 +55,44 @@ export default function BlogPage() {
       title: 'Investment Property Calculator: Mortgage, Cash Flow, and Returns Explained',
       description: 'Down payment requirements, rate premiums, cash flow analysis, cap rate, and cash-on-cash return for investment properties.',
     },
+    {
+      slug: 'arm-vs-fixed-rate',
+      tag: 'Loan Comparison',
+      title: 'ARM vs Fixed Rate Mortgage: How to Calculate Which Saves You More',
+      description: 'Cap structures, worst-case payment scenarios, break-even horizon, and when an adjustable-rate mortgage makes financial sense.',
+    },
+    {
+      slug: 'mortgage-payoff-calculator',
+      tag: 'Payoff Strategy',
+      title: 'Mortgage Payoff Calculator: How Extra Payments Eliminate Years and Save Thousands',
+      description: 'Biweekly payments, lump-sum strategy, invest vs pay off analysis, and how to ensure your lender applies payments correctly.',
+    },
+    {
+      slug: 'calculadora-hipoteca-fha',
+      tag: 'En Español',
+      title: 'Calculadora de Hipoteca FHA: Cómo Calcular Tu Pago Incluyendo el Seguro MIP',
+      description: 'Requisitos de pago inicial, seguro MIP explicado, límites 2026 y comparación FHA vs convencional. Sin registro requerido.',
+    },
+    {
+      slug: 'calculadora-amortizacion',
+      tag: 'En Español',
+      title: 'Calculadora de Amortización: Cómo Leer Tu Tabla de Pagos Hipotecarios',
+      description: 'Por qué los primeros años son casi todo interés, cómo los pagos extra transforman tu préstamo, y comparativa 15 vs 30 años.',
+    },
   ];
+
+  const tagColors: Record<string, string> = {
+    'FHA Loans': 'text-blue-600 bg-blue-50',
+    'Loan Comparison': 'text-purple-600 bg-purple-50',
+    'Refinance': 'text-orange-600 bg-orange-50',
+    'Amortization': 'text-teal-600 bg-teal-50',
+    'VA Loans': 'text-red-600 bg-red-50',
+    'USDA Loans': 'text-green-600 bg-green-50',
+    'Jumbo Loans': 'text-indigo-600 bg-indigo-50',
+    'Investment': 'text-amber-600 bg-amber-50',
+    'Payoff Strategy': 'text-cyan-600 bg-cyan-50',
+    'En Español': 'text-rose-600 bg-rose-50',
+  };
 
   return (
     <div className="min-h-screen bg-[#F8F9FA]" style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>
@@ -76,13 +113,13 @@ export default function BlogPage() {
         <div className="text-[11px] font-semibold tracking-[0.08em] uppercase text-blue-600 mb-3">Mortgage Education</div>
         <h1 className="text-[32px] font-bold tracking-tight text-gray-900 mb-3">Mortgage Guides</h1>
         <p className="text-[16px] text-gray-500 leading-relaxed mb-10">
-          Technical guides on mortgage calculations, loan types, and financing strategy. No fluff. No lead capture.
+          Technical guides on mortgage calculations, loan types, and financing strategy. No fluff. No lead capture. 12 articles.
         </p>
 
         <div className="space-y-4">
           {articles.map(({ slug, tag, title, description }) => (
             <a key={slug} href={'/blog/' + slug} className="block bg-white rounded-xl p-6 shadow-[0_4px_6px_-1px_rgb(0_0_0/0.08)] hover:shadow-[0_6px_12px_-2px_rgb(0_0_0/0.12)] transition-shadow">
-              <div className="inline-block text-[10px] font-semibold tracking-[0.08em] uppercase text-blue-600 bg-blue-50 px-2.5 py-1 rounded mb-3">{tag}</div>
+              <div className={"inline-block text-[10px] font-semibold tracking-[0.08em] uppercase px-2.5 py-1 rounded mb-3 " + (tagColors[tag] || 'text-blue-600 bg-blue-50')}>{tag}</div>
               <h2 className="text-[17px] font-bold text-gray-900 mb-2 leading-snug">{title}</h2>
               <p className="text-[14px] text-gray-500 leading-relaxed">{description}</p>
               <p className="text-[13px] text-blue-600 font-semibold mt-3">Read article →</p>
