@@ -1,3 +1,4 @@
+import AuthorBox from '@/components/blog/AuthorBox';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -11,7 +12,7 @@ const jsonLd = JSON.stringify({
   '@type': 'Article',
   headline: 'FHA Mortgage Calculator: Calculate Your Payment Including MIP',
   description: 'Complete guide to FHA loans with free calculator. Includes MIP calculation, 3.5% down payment requirements, and credit score thresholds.',
-  author: { '@type': 'Organization', name: 'Truly Free Mortgage Calculator' },
+  author: { '@type': 'Person', name: 'George Smith', url: 'https://www.linkedin.com/in/george-smith-832113217/' },
   publisher: { '@type': 'Organization', name: 'Klickify Agency' },
   url: 'https://trulyfreetools.com/blog/fha-mortgage-calculator',
 });
@@ -75,6 +76,13 @@ export default function FHAMortgageCalculator() {
           <h1 className="text-3xl font-bold text-gray-900 tracking-tight mb-4 mt-3">
             FHA Mortgage Calculator: Calculate Your Payment Including MIP
           </h1>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '32px', paddingBottom: '24px', borderBottom: '1px solid rgba(74,85,104,0.1)' }}>
+            <img src="/george-smith.png" alt="George Smith" width={36} height={36} style={{ borderRadius: '50%', objectFit: 'cover' }} />
+            <div>
+              <span style={{ fontSize: '14px', fontWeight: 600, color: '#181c1e', letterSpacing: '-0.01em' }}>George Smith</span>
+              <span style={{ fontSize: '13px', color: '#718096', letterSpacing: '-0.01em' }}> — Founder, Klickify Agency</span>
+            </div>
+          </div>
           <p className="text-lg text-gray-600 mb-8 leading-relaxed">
             The FHA loan is the most misunderstood mortgage product in the United States. Lenders market its low 3.5% down payment prominently while burying the true cost of Mortgage Insurance Premium (MIP) in footnotes. This guide gives you the technical formula to calculate your exact FHA payment — including both upfront and annual MIP — with zero data collection on our end.
           </p>
@@ -224,7 +232,9 @@ export default function FHAMortgageCalculator() {
             </p>
           </div>
         </div>
-      </div>
+      
+          <AuthorBox />
+        </div>
     </>
   );
 }

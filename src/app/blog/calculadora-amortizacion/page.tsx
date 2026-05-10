@@ -1,3 +1,4 @@
+import AuthorBox from '@/components/blog/AuthorBox';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -109,6 +110,13 @@ export default function CalculadoraAmortizacionPage() {
           <h1 className="text-[32px] font-bold tracking-tight text-gray-900 mb-4 leading-tight">
             Calculadora de Amortización: Cómo Leer Tu Tabla de Pagos Hipotecarios
           </h1>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '32px', paddingBottom: '24px', borderBottom: '1px solid rgba(74,85,104,0.1)' }}>
+            <img src="/george-smith.png" alt="George Smith" width={36} height={36} style={{ borderRadius: '50%', objectFit: 'cover' }} />
+            <div>
+              <span style={{ fontSize: '14px', fontWeight: 600, color: '#181c1e', letterSpacing: '-0.01em' }}>George Smith</span>
+              <span style={{ fontSize: '13px', color: '#718096', letterSpacing: '-0.01em' }}> — Founder, Klickify Agency</span>
+            </div>
+          </div>
 
           <p className="text-[16px] text-gray-500 leading-relaxed mb-8">
             Cada pago de tu hipoteca contiene dos componentes: capital e interés. La proporción entre ellos cambia cada mes, dramáticamente a tu favor con el tiempo si entiendes la mecánica. Una tabla de amortización hace visible este proceso. Aquí está cómo funciona, cómo generarla gratis y cómo usarla para tomar mejores decisiones sobre tu préstamo.
@@ -247,7 +255,9 @@ export default function CalculadoraAmortizacionPage() {
             </p>
           </div>
         </div>
-      </div>
+      
+          <AuthorBox />
+        </div>
     </>
   );
 }

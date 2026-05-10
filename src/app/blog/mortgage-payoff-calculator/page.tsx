@@ -1,3 +1,4 @@
+import AuthorBox from '@/components/blog/AuthorBox';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -99,6 +100,13 @@ export default function MortgagePayoffCalculatorPage() {
           <h1 className="text-[32px] font-bold tracking-tight text-gray-900 mb-4 leading-tight">
             Mortgage Payoff Calculator: How Extra Payments Eliminate Years and Save Thousands
           </h1>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '32px', paddingBottom: '24px', borderBottom: '1px solid rgba(74,85,104,0.1)' }}>
+            <img src="/george-smith.png" alt="George Smith" width={36} height={36} style={{ borderRadius: '50%', objectFit: 'cover' }} />
+            <div>
+              <span style={{ fontSize: '14px', fontWeight: 600, color: '#181c1e', letterSpacing: '-0.01em' }}>George Smith</span>
+              <span style={{ fontSize: '13px', color: '#718096', letterSpacing: '-0.01em' }}> — Founder, Klickify Agency</span>
+            </div>
+          </div>
 
           <p className="text-[16px] text-gray-500 leading-relaxed mb-8">
             Every extra dollar you pay toward your mortgage principal eliminates a compounding stream of future interest charges. The math is unambiguous and the results are dramatic. Here is exactly how accelerated payoff strategies work, how to calculate the impact, and how to ensure your lender applies your extra payments correctly.
@@ -236,7 +244,9 @@ export default function MortgagePayoffCalculatorPage() {
             </p>
           </div>
         </div>
-      </div>
+      
+          <AuthorBox />
+        </div>
     </>
   );
 }

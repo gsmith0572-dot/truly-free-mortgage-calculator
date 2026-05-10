@@ -1,3 +1,4 @@
+import AuthorBox from '@/components/blog/AuthorBox';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -99,6 +100,13 @@ export default function USDARuralHomeLoanCalculatorPage() {
           <h1 className="text-[32px] font-bold tracking-tight text-gray-900 mb-4 leading-tight">
             USDA Rural Home Loan Calculator: Zero Down Payment for Eligible Areas
           </h1>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '32px', paddingBottom: '24px', borderBottom: '1px solid rgba(74,85,104,0.1)' }}>
+            <img src="/george-smith.png" alt="George Smith" width={36} height={36} style={{ borderRadius: '50%', objectFit: 'cover' }} />
+            <div>
+              <span style={{ fontSize: '14px', fontWeight: 600, color: '#181c1e', letterSpacing: '-0.01em' }}>George Smith</span>
+              <span style={{ fontSize: '13px', color: '#718096', letterSpacing: '-0.01em' }}> — Founder, Klickify Agency</span>
+            </div>
+          </div>
 
           <p className="text-[16px] text-gray-500 leading-relaxed mb-8">
             The USDA guaranteed loan program is the most overlooked zero-down mortgage in America. Millions of eligible borrowers never use it because they assume rural means remote farmland. In reality, many suburbs and small cities qualify. Here is how to calculate your payment, verify your eligibility, and understand every fee involved.
@@ -233,7 +241,9 @@ export default function USDARuralHomeLoanCalculatorPage() {
             </p>
           </div>
         </div>
-      </div>
+      
+          <AuthorBox />
+        </div>
     </>
   );
 }

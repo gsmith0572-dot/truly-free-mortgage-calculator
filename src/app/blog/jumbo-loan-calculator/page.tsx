@@ -1,3 +1,4 @@
+import AuthorBox from '@/components/blog/AuthorBox';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -99,6 +100,13 @@ export default function JumboLoanCalculatorPage() {
           <h1 className="text-[32px] font-bold tracking-tight text-gray-900 mb-4 leading-tight">
             Jumbo Loan Calculator: How to Calculate Payments on High-Balance Mortgages
           </h1>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '32px', paddingBottom: '24px', borderBottom: '1px solid rgba(74,85,104,0.1)' }}>
+            <img src="/george-smith.png" alt="George Smith" width={36} height={36} style={{ borderRadius: '50%', objectFit: 'cover' }} />
+            <div>
+              <span style={{ fontSize: '14px', fontWeight: 600, color: '#181c1e', letterSpacing: '-0.01em' }}>George Smith</span>
+              <span style={{ fontSize: '13px', color: '#718096', letterSpacing: '-0.01em' }}> — Founder, Klickify Agency</span>
+            </div>
+          </div>
 
           <p className="text-[16px] text-gray-500 leading-relaxed mb-8">
             When a loan exceeds the conforming limit set by the Federal Housing Finance Agency it becomes a jumbo loan — and the rules change significantly. No government backing, stricter qualification standards, and a different risk calculus for lenders. Here is how jumbo loans work, what they cost, and how to calculate your payment accurately.
@@ -236,7 +244,9 @@ export default function JumboLoanCalculatorPage() {
             </p>
           </div>
         </div>
-      </div>
+      
+          <AuthorBox />
+        </div>
     </>
   );
 }

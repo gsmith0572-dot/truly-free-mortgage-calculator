@@ -1,3 +1,4 @@
+import AuthorBox from '@/components/blog/AuthorBox';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -11,7 +12,7 @@ const jsonLd = JSON.stringify({
   '@type': 'Article',
   headline: 'Mortgage Refinance Calculator: The Break-Even Point Formula',
   description: 'How to calculate your exact refinance break-even month, total interest savings, and whether refinancing makes financial sense for your situation.',
-  author: { '@type': 'Organization', name: 'Truly Free Mortgage Calculator' },
+  author: { '@type': 'Person', name: 'George Smith', url: 'https://www.linkedin.com/in/george-smith-832113217/' },
   publisher: { '@type': 'Organization', name: 'Klickify Agency' },
   url: 'https://trulyfreetools.com/blog/mortgage-refinance-calculator',
 });
@@ -53,6 +54,13 @@ export default function RefinanceCalculator() {
             <span className="inline-block bg-blue-50 text-blue-600 text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full">Refinancing</span>
           </div>
           <h1 className="text-3xl font-bold text-gray-900 tracking-tight mb-4 mt-3">Mortgage Refinance Calculator: The Break-Even Point Formula</h1>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '32px', paddingBottom: '24px', borderBottom: '1px solid rgba(74,85,104,0.1)' }}>
+            <img src="/george-smith.png" alt="George Smith" width={36} height={36} style={{ borderRadius: '50%', objectFit: 'cover' }} />
+            <div>
+              <span style={{ fontSize: '14px', fontWeight: 600, color: '#181c1e', letterSpacing: '-0.01em' }}>George Smith</span>
+              <span style={{ fontSize: '13px', color: '#718096', letterSpacing: '-0.01em' }}> — Founder, Klickify Agency</span>
+            </div>
+          </div>
           <p className="text-lg text-gray-600 mb-8 leading-relaxed">Refinancing without calculating your break-even point is a financial error. Lenders benefit from every refinance regardless of whether it helps you — they collect new origination fees and reset your amortization schedule. This guide gives you the exact formula to determine whether refinancing produces a net financial gain in your specific situation.</p>
           <a href="/mortgage-calculator" className="block bg-blue-600 text-white rounded-xl p-5 mb-10 hover:bg-blue-700 transition-colors">
             <p className="text-xs font-semibold uppercase tracking-widest opacity-75 mb-1">Free Tool</p>
@@ -171,7 +179,9 @@ export default function RefinanceCalculator() {
             <p className="text-xs text-gray-400 leading-relaxed">Figures on this page are for educational purposes only. Actual refinance costs, savings, and break-even timelines depend on lender-specific fees and current market rates. Truly Free Mortgage Calculator does not collect personal data and does not connect users with lenders.</p>
           </div>
         </div>
-      </div>
+      
+          <AuthorBox />
+        </div>
     </>
   );
 }

@@ -1,3 +1,4 @@
+import AuthorBox from '@/components/blog/AuthorBox';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -11,7 +12,7 @@ const jsonLd = JSON.stringify({
   '@type': 'Article',
   headline: '15-Year vs 30-Year Mortgage: The Complete Interest Cost Analysis',
   description: 'Side-by-side comparison of 15-year and 30-year mortgages including total interest paid, monthly payment difference, and opportunity cost of capital.',
-  author: { '@type': 'Organization', name: 'Truly Free Mortgage Calculator' },
+  author: { '@type': 'Person', name: 'George Smith', url: 'https://www.linkedin.com/in/george-smith-832113217/' },
   publisher: { '@type': 'Organization', name: 'Klickify Agency' },
   url: 'https://trulyfreetools.com/blog/15-year-vs-30-year-mortgage',
 });
@@ -58,6 +59,13 @@ export default function FifteenVsThirtyYear() {
             <span className="inline-block bg-blue-50 text-blue-600 text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full">Loan Comparison</span>
           </div>
           <h1 className="text-3xl font-bold text-gray-900 tracking-tight mb-4 mt-3">15-Year vs 30-Year Mortgage: The Complete Interest Cost Analysis</h1>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '32px', paddingBottom: '24px', borderBottom: '1px solid rgba(74,85,104,0.1)' }}>
+            <img src="/george-smith.png" alt="George Smith" width={36} height={36} style={{ borderRadius: '50%', objectFit: 'cover' }} />
+            <div>
+              <span style={{ fontSize: '14px', fontWeight: 600, color: '#181c1e', letterSpacing: '-0.01em' }}>George Smith</span>
+              <span style={{ fontSize: '13px', color: '#718096', letterSpacing: '-0.01em' }}> — Founder, Klickify Agency</span>
+            </div>
+          </div>
           <p className="text-lg text-gray-600 mb-8 leading-relaxed">The choice between a 15-year and 30-year mortgage is the single most consequential financial decision in a home purchase after the purchase price itself. On a $300,000 loan, the wrong choice costs over $200,000 in additional interest. This analysis provides the exact numbers with no lead capture and no lender referral fees.</p>
           <a href="/mortgage-calculator" className="block bg-blue-600 text-white rounded-xl p-5 mb-10 hover:bg-blue-700 transition-colors">
             <p className="text-xs font-semibold uppercase tracking-widest opacity-75 mb-1">Free Tool</p>
@@ -135,7 +143,9 @@ export default function FifteenVsThirtyYear() {
             <p className="text-xs text-gray-400 leading-relaxed">Figures on this page use illustrative interest rates and are for educational purposes only. Actual rates vary by lender, credit score, and market conditions. Truly Free Mortgage Calculator does not collect personal data and does not connect users with lenders.</p>
           </div>
         </div>
-      </div>
+      
+          <AuthorBox />
+        </div>
     </>
   );
 }
