@@ -17,7 +17,7 @@ const jsonLd = JSON.stringify({
     "@type": "Person",
     name: "George Smith",
     url: "https://www.linkedin.com/in/george-smith-832113217/",
-    email: "george@klickifyagency.com",
+    email: "info@klickifyagency.com",
     jobTitle: "Founder",
     worksFor: { "@type": "Organization", name: "Klickify Agency" },
   },
@@ -48,7 +48,7 @@ export default function AboutPage() {
                 <h1 className="text-2xl font-bold text-[#181c1e] tracking-tight mb-1">George Smith</h1>
                 <div className="text-sm font-semibold text-[#0058c3] mb-4">Klickify Agency</div>
                 <div className="flex items-center gap-4">
-                  <a href="mailto:george@klickifyagency.com" className="text-sm text-[#718096] hover:text-[#181c1e] transition-colors">george@klickifyagency.com</a>
+                  <a href="mailto:info@klickifyagency.com" className="text-sm text-[#718096] hover:text-[#181c1e] transition-colors">info@klickifyagency.com</a>
                   <a href="https://www.linkedin.com/in/george-smith-832113217/" target="_blank" rel="noopener noreferrer" className="text-sm font-semibold text-[#0058c3] hover:text-[#0070f3] transition-colors">LinkedIn</a>
                 </div>
               </div>
@@ -61,7 +61,7 @@ export default function AboutPage() {
             </div>
             <div className="mt-10 pt-8 border-t border-[rgba(74,85,104,0.1)] flex flex-col sm:flex-row gap-3">
               <a href="/mortgage-calculator" className="inline-flex items-center justify-center px-5 py-2.5 bg-[#0058c3] text-white text-sm font-semibold rounded-lg hover:bg-[#0070f3] transition-colors">Use the Calculator</a>
-              <a href="mailto:george@klickifyagency.com" className="inline-flex items-center justify-center px-5 py-2.5 bg-[#F8F9FA] text-[#4a5568] text-sm font-semibold rounded-lg hover:bg-[#e2e8f0] transition-colors">Send Feedback</a>
+              <a href="mailto:info@klickifyagency.com" className="inline-flex items-center justify-center px-5 py-2.5 bg-[#F8F9FA] text-[#4a5568] text-sm font-semibold rounded-lg hover:bg-[#e2e8f0] transition-colors">Send Feedback</a>
             </div>
           </div>
         </div>

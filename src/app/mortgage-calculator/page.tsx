@@ -4,6 +4,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Free Mortgage Calculator — No Registration | Truly Free',
   description: 'Calculate your mortgage payment instantly. Full amortization schedule, PMI, taxes, HOA. 100% free. No email. No signup.',
+  alternates: { canonical: 'https://trulyfreemortgage.com/mortgage-calculator' },
 };
 
 export default function Page() {

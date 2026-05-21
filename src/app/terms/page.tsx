@@ -50,7 +50,7 @@ export default function TermsPage() {
             </div>
             <div>
               <h2 className="text-[16px] font-bold text-[#181c1e] mb-2">Contact</h2>
-              <p>For questions about these terms, contact us at <a href="mailto:george@klickifyagency.com" className="text-[#0058c3] font-medium">george@klickifyagency.com</a>.</p>
+              <p>For questions about these terms, contact us at <a href="mailto:info@klickifyagency.com" className="text-[#0058c3] font-medium">info@klickifyagency.com</a>.</p>
             </div>
           </div>
         </div>

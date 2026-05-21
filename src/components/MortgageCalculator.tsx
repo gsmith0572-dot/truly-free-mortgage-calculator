@@ -115,8 +115,40 @@ const JSON_LD = JSON.stringify({
   operatingSystem: 'Web Browser',
   offers: { '@type': 'Offer', price: '0.00', priceCurrency: 'USD' },
   description: 'Free mortgage calculator with full amortization schedule, PMI, taxes, insurance, HOA. No registration. No email. 100% client-side.',
-  url: 'https://trulyfreetools.com/mortgage-calculator',
+  url: 'https://trulyfreemortgage.com/mortgage-calculator',
   creator: { '@type': 'Organization', name: 'Klickify Agency' },
+});
+
+const FAQ_LD = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'How does the mortgage calculator work?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Enter your home price, down payment, interest rate, and loan term. The calculator computes your monthly principal and interest payment using the standard amortization formula. Toggle property tax, homeowners insurance, PMI, and HOA to see your full monthly cost. All calculations happen instantly in your browser — no data is sent to any server.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is included in a monthly mortgage payment?',
+      acceptedAnswer: { '@type': 'Answer', text: 'A full mortgage payment typically includes four components known as PITI: Principal (the portion reducing your loan balance), Interest (the lender\'s cost for the loan), Taxes (property tax escrowed monthly), and Insurance (homeowners insurance). If your down payment is below 20%, PMI (Private Mortgage Insurance) is added. HOA fees apply to condos and planned communities.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is PMI and when do I need it?',
+      acceptedAnswer: { '@type': 'Answer', text: 'PMI stands for Private Mortgage Insurance. Lenders require it when your down payment is less than 20% of the purchase price. It protects the lender — not you — in the event of default. Typical PMI costs 0.5% to 1.5% of the loan amount annually. PMI is automatically removed when your loan balance reaches 80% of the original home value.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is an amortization schedule?',
+      acceptedAnswer: { '@type': 'Answer', text: 'An amortization schedule shows every monthly payment over the life of your loan, breaking each payment into its principal and interest components. In the early years of a mortgage, most of each payment is interest. As the loan matures, the principal portion grows. This is why extra payments made early in the loan have a much larger impact on total interest paid.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'How much house can I afford?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Most lenders use the 28/36 rule: your housing costs should not exceed 28% of your gross monthly income, and total debt payments should not exceed 36%. For a household earning $7,000 per month gross, the maximum housing payment is $1,960. Use this calculator to find the home price that produces a payment within that range.' },
+    },
+  ],
 });
 
 function Toggle({ label, hint, checked, onChange }: { label: string; hint: string; checked: boolean; onChange: (v: boolean) => void }) {
@@ -249,6 +281,7 @@ export default function MortgageCalculator() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON_LD }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: FAQ_LD }} />
       <style>{`
         @media print {
           .no-print { display: none !important; }
@@ -261,7 +294,7 @@ export default function MortgageCalculator() {
           <div className="flex gap-6">
             {['Calculator','Compare','Blog'].map((l) => (
               l === 'Blog'
-                ? <a key={l} href="/blog/fha-mortgage-calculator" className="text-sm text-gray-500 hover:text-gray-700">{l}</a>
+                ? <a key={l} href="/blog" className="text-sm text-gray-500 hover:text-gray-700">{l}</a>
                 : <button key={l} onClick={() => l === 'Compare' ? setMode('scenario') : setMode('standard')}
                     className={"text-sm transition-colors " + ((l === 'Calculator' && mode === 'standard') || (l === 'Compare' && mode === 'scenario') ? 'text-blue-600 font-medium' : 'text-gray-500 hover:text-gray-700')}>{l}</button>
             ))}
@@ -366,6 +399,104 @@ export default function MortgageCalculator() {
               </div>
             </div>
           )}
+
+          {/* Editorial content — AdSense quality + SEO */}
+          <div className="mt-16 space-y-12 no-print">
+
+            {/* How to use */}
+            <div>
+              <h2 className="text-xl font-semibold text-gray-900 tracking-tight mb-2">How to Use This Mortgage Calculator</h2>
+              <p className="text-sm text-gray-500 mb-6">Four inputs. Instant results. Nothing stored.</p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {[
+                  ['1. Enter Home Price', 'Type the purchase price of the home. The calculator automatically sets a 20% down payment as the starting point. You can adjust this freely.'],
+                  ['2. Set Your Down Payment', 'Enter a dollar amount or drag the slider to set your down payment percentage. Drop below 20% and the PMI toggle becomes relevant — enable it to see the true cost.'],
+                  ['3. Enter Interest Rate', 'Use your lender\'s quoted rate or the current national average. Even a 0.25% difference changes your total interest paid by thousands of dollars over 30 years.'],
+                  ['4. Choose Loan Term', 'Select 10, 15, 20, or 30 years. Shorter terms mean higher monthly payments but dramatically less total interest. Use the Scenario Comparison tab to see the numbers side by side.'],
+                ].map(([title, desc]) => (
+                  <div key={String(title)} className="bg-white rounded-lg shadow-[0_2px_4px_-1px_rgb(0_0_0/0.06)] p-5">
+                    <p className="text-sm font-semibold text-blue-600 mb-2">{title}</p>
+                    <p className="text-sm text-gray-600 leading-relaxed">{desc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* What's in a mortgage payment */}
+            <div>
+              <h2 className="text-xl font-semibold text-gray-900 tracking-tight mb-4">What's Actually in Your Monthly Payment</h2>
+              <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                Most people focus on the principal and interest number, but your real monthly obligation is higher. Lenders use the acronym PITI — Principal, Interest, Taxes, and Insurance — to describe the full payment. When you add PMI and HOA, the gap between your P&I payment and your actual monthly cost can be $400 to $700 on a median-priced home.
+              </p>
+              <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                Property taxes are collected monthly into an escrow account by your servicer and paid to the county annually. In high-tax states like New Jersey, Illinois, or Connecticut, property taxes alone can add $600 to $900 per month to a $400,000 home. That's not a small number. This calculator uses a 1.2% annual rate as the national average estimate — toggle it on and see what it adds to your payment.
+              </p>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                PMI disappears once you reach 20% equity, but until then it's a real cost. On a $350,000 loan with 5% down, PMI at 0.85% annually adds $248 per month — that's $2,976 per year for coverage that protects your lender, not you. Putting 20% down eliminates it entirely. If you can't hit 20%, aim to reach it as fast as possible through extra principal payments.
+              </p>
+            </div>
+
+            {/* How amortization works */}
+            <div>
+              <h2 className="text-xl font-semibold text-gray-900 tracking-tight mb-4">How Mortgage Amortization Works</h2>
+              <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                Here's the thing most lenders don't explain clearly: in the first year of a 30-year mortgage, roughly 80% of each payment goes to interest. You're paying $1,946 per month on a $300,000 loan at 6.75%, but only about $270 of that first payment reduces your balance. The remaining $1,676 goes straight to the lender as interest.
+              </p>
+              <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                This front-loading of interest is baked into the amortization formula. Every month your balance drops slightly, so the interest portion shrinks and the principal portion grows — but slowly. By year 10 of a 30-year loan, you've paid about 30% of total interest but reduced your principal by only about 15%. The math is not intuitive, which is exactly why this calculator includes a full amortization schedule.
+              </p>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Click "Full Amortization Schedule" above to see every payment, month by month. Scroll to any point in the loan to see exactly how much you'd still owe. Pay attention to what happens when you make even one extra principal payment early — it ripples through every subsequent row, shaving months off the loan and hundreds of dollars off total interest.
+              </p>
+            </div>
+
+            {/* FAQ section */}
+            <div>
+              <h2 className="text-xl font-semibold text-gray-900 tracking-tight mb-6">Frequently Asked Questions</h2>
+              <div className="space-y-4">
+                {[
+                  ['How does the mortgage calculator work?', 'Enter your home price, down payment, interest rate, and loan term. The calculator computes your monthly principal and interest payment using the standard amortization formula. Toggle property tax, insurance, PMI, and HOA to see your full monthly cost. All calculations happen instantly in your browser — no data is sent anywhere.'],
+                  ['What is included in a monthly mortgage payment?', 'A full mortgage payment has four components: Principal (reduces your loan balance), Interest (the lender\'s fee for the loan), Taxes (property tax escrowed monthly), and Insurance (homeowners insurance). Below 20% down payment, PMI is added. HOA fees apply to condos and some communities.'],
+                  ['What is PMI and when do I need it?', 'PMI is Private Mortgage Insurance. Lenders require it when your down payment is below 20%. It protects the lender — not you — against default. Typical cost is 0.5% to 1.5% of the loan amount annually. It\'s automatically removed when your loan balance hits 80% of the original home value.'],
+                  ['What is an amortization schedule?', 'An amortization schedule shows every monthly payment over the life of your loan, broken into principal and interest. In early years, most of each payment is interest. As the loan ages, the principal portion grows. Extra payments made early in the loan have an outsized impact on total interest paid.'],
+                  ['How much house can I afford?', 'Lenders use the 28/36 rule: housing costs should stay under 28% of gross monthly income, and total debt under 36%. For a $7,000/month gross income, the max housing payment is $1,960. Use this calculator to find the home price that keeps your payment in that range given your down payment and current rates.'],
+                ].map(([q, a]) => (
+                  <div key={String(q)} className="bg-white rounded-lg shadow-[0_2px_4px_-1px_rgb(0_0_0/0.06)] p-5">
+                    <p className="font-semibold text-gray-900 mb-2 text-sm">{q}</p>
+                    <p className="text-sm text-gray-600 leading-relaxed">{a}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Related guides */}
+            <div>
+              <h2 className="text-xl font-semibold text-gray-900 tracking-tight mb-4">Mortgage Guides</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {[
+                  ['/blog/fha-mortgage-calculator', 'FHA Mortgage Calculator', 'Calculate your FHA payment including upfront and annual MIP. Down payment requirements by credit score.'],
+                  ['/blog/15-year-vs-30-year-mortgage', '15-Year vs 30-Year Mortgage', 'Side-by-side interest cost analysis. On a $300,000 loan the difference is $237,000.'],
+                  ['/blog/mortgage-refinance-calculator', 'Mortgage Refinance Calculator', 'Calculate your break-even point. When refinancing saves money and when it costs you.'],
+                  ['/blog/va-loan-calculator', 'VA Loan Calculator', 'No PMI, no down payment. Calculate your VA loan payment with funding fee included.'],
+                  ['/blog/amortization-schedule-generator', 'Amortization Schedule Generator', 'How to read your payment breakdown and where extra payments have the most impact.'],
+                  ['/blog/mortgage-payoff-calculator', 'Mortgage Payoff Calculator', 'How extra payments eliminate years off your loan and save thousands in interest.'],
+                ].map(([href, title, desc]) => (
+                  <a key={String(href)} href={String(href)} className="block bg-white rounded-lg shadow-[0_2px_4px_-1px_rgb(0_0_0/0.06)] p-4 hover:shadow-[0_4px_8px_-2px_rgb(0_0_0/0.1)] transition-shadow">
+                    <p className="text-sm font-semibold text-blue-600 mb-1">{title}</p>
+                    <p className="text-xs text-gray-500 leading-relaxed">{desc}</p>
+                  </a>
+                ))}
+              </div>
+            </div>
+
+            {/* Disclaimer */}
+            <div className="border-t border-gray-100 pt-8">
+              <p className="text-xs text-gray-400 leading-relaxed">
+                Calculations are estimates for educational purposes only. Actual mortgage terms, rates, and payments depend on lender requirements and your financial profile. Truly Free Mortgage Calculator does not collect personal data and does not connect users with lenders. Always consult a licensed mortgage professional before making financial decisions.
+              </p>
+            </div>
+
+          </div>
         </div>
       </div>
     </>

@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'FHA Mortgage Calculator — Free, No Registration | Truly Free',
   description: 'Calculate your FHA loan payment including MIP insurance. 3.5% minimum down payment. No email required. 100% free, calculated in your browser.',
-  alternates: { canonical: 'https://trulyfreetools.com/blog/fha-mortgage-calculator' },
+  alternates: { canonical: 'https://trulyfreemortgage.com/blog/fha-mortgage-calculator' },
 };
 
 const jsonLd = JSON.stringify({
@@ -14,7 +14,10 @@ const jsonLd = JSON.stringify({
   description: 'Complete guide to FHA loans with free calculator. Includes MIP calculation, 3.5% down payment requirements, and credit score thresholds.',
   author: { '@type': 'Person', name: 'George Smith', url: 'https://www.linkedin.com/in/george-smith-832113217/' },
   publisher: { '@type': 'Organization', name: 'Klickify Agency' },
-  url: 'https://trulyfreetools.com/blog/fha-mortgage-calculator',
+  url: 'https://trulyfreemortgage.com/blog/fha-mortgage-calculator',
+  datePublished: '2026-05-09',
+  dateModified: '2026-05-20',
+  mainEntityOfPage: 'https://trulyfreemortgage.com/blog/fha-mortgage-calculator',
 });
 
 const faqJsonLd = JSON.stringify({
@@ -231,10 +234,9 @@ export default function FHAMortgageCalculator() {
               The calculations and information on this page are for educational purposes only. Actual FHA loan terms, MIP rates, and eligibility requirements are set by HUD and may change. Consult a HUD-approved lender for loan-specific figures. Truly Free Mortgage Calculator does not collect personal data and does not connect users with lenders.
             </p>
           </div>
-        </div>
-      
           <AuthorBox />
         </div>
+      </div>
     </>
   );
 }

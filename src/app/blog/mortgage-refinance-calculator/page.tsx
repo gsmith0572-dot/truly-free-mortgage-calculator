@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Mortgage Refinance Calculator — Break-Even Analysis | Truly Free',
   description: 'Calculate your refinance break-even point, monthly savings, and total interest reduction. No email. No registration. 100% free.',
-  alternates: { canonical: 'https://trulyfreetools.com/blog/mortgage-refinance-calculator' },
+  alternates: { canonical: 'https://trulyfreemortgage.com/blog/mortgage-refinance-calculator' },
 };
 
 const jsonLd = JSON.stringify({
@@ -14,7 +14,10 @@ const jsonLd = JSON.stringify({
   description: 'How to calculate your exact refinance break-even month, total interest savings, and whether refinancing makes financial sense for your situation.',
   author: { '@type': 'Person', name: 'George Smith', url: 'https://www.linkedin.com/in/george-smith-832113217/' },
   publisher: { '@type': 'Organization', name: 'Klickify Agency' },
-  url: 'https://trulyfreetools.com/blog/mortgage-refinance-calculator',
+  url: 'https://trulyfreemortgage.com/blog/mortgage-refinance-calculator',
+  datePublished: '2026-05-09',
+  dateModified: '2026-05-20',
+  mainEntityOfPage: 'https://trulyfreemortgage.com/blog/mortgage-refinance-calculator',
 });
 
 const faqJsonLd = JSON.stringify({
@@ -178,10 +181,9 @@ export default function RefinanceCalculator() {
           <div className="mt-10 pt-8 border-t border-gray-200">
             <p className="text-xs text-gray-400 leading-relaxed">Figures on this page are for educational purposes only. Actual refinance costs, savings, and break-even timelines depend on lender-specific fees and current market rates. Truly Free Mortgage Calculator does not collect personal data and does not connect users with lenders.</p>
           </div>
-        </div>
-      
           <AuthorBox />
         </div>
+      </div>
     </>
   );
 }

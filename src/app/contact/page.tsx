@@ -26,16 +26,16 @@ export default function ContactPage() {
           <div className="space-y-6">
             <div className="bg-[#F8F9FA] rounded-lg p-6">
               <div className="text-[10px] font-semibold tracking-[0.08em] uppercase text-[#718096] mb-3">General inquiries</div>
-              <a href="mailto:george@klickifyagency.com" className="text-[15px] font-semibold text-[#0058c3] hover:text-[#0070f3] transition-colors">george@klickifyagency.com</a>
+              <a href="mailto:info@klickifyagency.com" className="text-[15px] font-semibold text-[#0058c3] hover:text-[#0070f3] transition-colors">info@klickifyagency.com</a>
             </div>
             <div className="bg-[#F8F9FA] rounded-lg p-6">
               <div className="text-[10px] font-semibold tracking-[0.08em] uppercase text-[#718096] mb-3">Found a bug?</div>
               <p className="text-[14px] text-[#4a5568] leading-relaxed mb-3">Describe the calculation that produced the wrong result, the inputs you used, and what you expected to see. We will fix it and reply within 48 hours.</p>
-              <a href="mailto:george@klickifyagency.com?subject=Bug Report — Truly Free Mortgage" className="text-[14px] font-semibold text-[#0058c3] hover:text-[#0070f3] transition-colors">Send bug report</a>
+              <a href="mailto:info@klickifyagency.com?subject=Bug Report — Truly Free Mortgage" className="text-[14px] font-semibold text-[#0058c3] hover:text-[#0070f3] transition-colors">Send bug report</a>
             </div>
             <div className="bg-[#F8F9FA] rounded-lg p-6">
               <div className="text-[10px] font-semibold tracking-[0.08em] uppercase text-[#718096] mb-3">Partnership or press</div>
-              <a href="mailto:george@klickifyagency.com?subject=Partnership Inquiry" className="text-[14px] font-semibold text-[#0058c3] hover:text-[#0070f3] transition-colors">george@klickifyagency.com</a>
+              <a href="mailto:info@klickifyagency.com?subject=Partnership Inquiry" className="text-[14px] font-semibold text-[#0058c3] hover:text-[#0070f3] transition-colors">info@klickifyagency.com</a>
             </div>
           </div>
         </div>

@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: '15-Year vs 30-Year Mortgage: Which Saves More Money? | Truly Free',
   description: 'Compare 15-year and 30-year mortgage payments, total interest costs, and break-even analysis. Free calculator included. No registration required.',
-  alternates: { canonical: 'https://trulyfreetools.com/blog/15-year-vs-30-year-mortgage' },
+  alternates: { canonical: 'https://trulyfreemortgage.com/blog/15-year-vs-30-year-mortgage' },
 };
 
 const jsonLd = JSON.stringify({
@@ -14,7 +14,10 @@ const jsonLd = JSON.stringify({
   description: 'Side-by-side comparison of 15-year and 30-year mortgages including total interest paid, monthly payment difference, and opportunity cost of capital.',
   author: { '@type': 'Person', name: 'George Smith', url: 'https://www.linkedin.com/in/george-smith-832113217/' },
   publisher: { '@type': 'Organization', name: 'Klickify Agency' },
-  url: 'https://trulyfreetools.com/blog/15-year-vs-30-year-mortgage',
+  url: 'https://trulyfreemortgage.com/blog/15-year-vs-30-year-mortgage',
+  datePublished: '2026-05-09',
+  dateModified: '2026-05-20',
+  mainEntityOfPage: 'https://trulyfreemortgage.com/blog/15-year-vs-30-year-mortgage',
 });
 
 const faqJsonLd = JSON.stringify({
@@ -142,10 +145,9 @@ export default function FifteenVsThirtyYear() {
           <div className="mt-10 pt-8 border-t border-gray-200">
             <p className="text-xs text-gray-400 leading-relaxed">Figures on this page use illustrative interest rates and are for educational purposes only. Actual rates vary by lender, credit score, and market conditions. Truly Free Mortgage Calculator does not collect personal data and does not connect users with lenders.</p>
           </div>
-        </div>
-      
           <AuthorBox />
         </div>
+      </div>
     </>
   );
 }

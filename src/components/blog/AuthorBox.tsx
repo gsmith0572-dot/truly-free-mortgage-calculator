@@ -11,7 +11,7 @@ export default function AuthorBox() {
         <div style={{ fontSize: "16px", fontWeight: 700, color: "#181c1e", letterSpacing: "-0.02em", marginBottom: "2px" }}>George Smith</div>
         <div style={{ fontSize: "13px", color: "#0058c3", fontWeight: 600, letterSpacing: "-0.01em", marginBottom: "6px" }}>Founder, Klickify Agency</div>
         <div style={{ display: "flex", alignItems: "center", gap: "16px", marginBottom: "10px" }}>
-          <a href="mailto:george@klickifyagency.com" style={{ fontSize: "12px", color: "#718096", textDecoration: "none", letterSpacing: "-0.01em" }}>george@klickifyagency.com</a>
+          <a href="mailto:info@klickifyagency.com" style={{ fontSize: "12px", color: "#718096", textDecoration: "none", letterSpacing: "-0.01em" }}>info@klickifyagency.com</a>
           <a href="https://www.linkedin.com/in/george-smith-832113217/" target="_blank" rel="noopener noreferrer" style={{ fontSize: "12px", color: "#0058c3", textDecoration: "none", fontWeight: 600, letterSpacing: "-0.01em" }}>LinkedIn</a>
         </div>
         <div style={{ fontSize: "14px", color: "#4a5568", lineHeight: "1.6", letterSpacing: "-0.01em" }}>George builds free web tools that respect user privacy. Founder of Klickify Agency.</div>

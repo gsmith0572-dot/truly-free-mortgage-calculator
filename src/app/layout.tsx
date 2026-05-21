@@ -37,7 +37,7 @@ function Footer() {
           <div style={{ fontSize: "10px", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", color: "#718096", marginBottom: "16px" }}>Support</div>
           <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
             <a href="/contact" style={{ fontSize: "14px", color: "#4a5568", textDecoration: "none", letterSpacing: "-0.01em" }}>Contact</a>
-            <a href="mailto:george@klickifyagency.com" style={{ fontSize: "14px", color: "#4a5568", textDecoration: "none", letterSpacing: "-0.01em" }}>george@klickifyagency.com</a>
+            <a href="mailto:info@klickifyagency.com" style={{ fontSize: "14px", color: "#4a5568", textDecoration: "none", letterSpacing: "-0.01em" }}>info@klickifyagency.com</a>
           </div>
         </div>
       </div>
@@ -52,10 +52,31 @@ function Footer() {
   );
 }
 
+const siteSchemas = JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "name": "Klickify Agency",
+      "url": "https://trulyfreemortgage.com",
+      "logo": "https://trulyfreemortgage.com/logo.png",
+      "contactPoint": { "@type": "ContactPoint", "email": "info@klickifyagency.com", "contactType": "customer support" },
+      "founder": { "@type": "Person", "name": "George Smith", "url": "https://www.linkedin.com/in/george-smith-832113217/" },
+    },
+    {
+      "@type": "WebSite",
+      "name": "Truly Free Mortgage Calculator",
+      "url": "https://trulyfreemortgage.com",
+      "description": "Free mortgage calculator with full amortization schedule, PMI, taxes, and HOA. No registration. No email. 100% client-side.",
+    },
+  ],
+});
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body className={inter.className} style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: siteSchemas }} />
         {children}
         <Footer />
         <Script
