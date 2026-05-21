@@ -2,6 +2,18 @@ import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = "https://trulyfreemortgage.com";
+  const statePages = [
+    "california-mortgage-calculator",
+    "texas-mortgage-calculator",
+    "florida-mortgage-calculator",
+    "new-york-mortgage-calculator",
+    "washington-mortgage-calculator",
+    "arizona-mortgage-calculator",
+    "colorado-mortgage-calculator",
+    "georgia-mortgage-calculator",
+    "north-carolina-mortgage-calculator",
+    "virginia-mortgage-calculator",
+  ];
   const articles = [
     "fha-mortgage-calculator",
     "15-year-vs-30-year-mortgage",
@@ -30,6 +42,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: "monthly" as const,
       priority: 0.7,
+    })),
+    ...statePages.map((slug) => ({
+      url: base + "/" + slug,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.75,
     })),
   ];
 }
