@@ -289,7 +289,7 @@ export default function MortgageCalculator() {
         }
       `}</style>
       <div className="min-h-screen bg-gray-50">
-        <nav className="bg-white px-6 h-20 flex items-center justify-between no-print">
+        <nav className="bg-white px-6 h-20 flex items-center justify-between no-print shadow-[0_1px_3px_rgb(0_0_0/0.06)]">
           <img src="/logo.png" alt="Truly Free Mortgage Calculator" style={{ height: '60px', width: 'auto', objectFit: 'contain', objectPosition: 'left center' }} />
           <div className="flex gap-6">
             {['Calculator','Compare','Blog'].map((l) => (
