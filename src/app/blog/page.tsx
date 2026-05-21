@@ -119,7 +119,7 @@ export default function BlogPage() {
 
         <div className="space-y-4">
           {articles.map(({ slug, tag, title, description }) => (
-            <a key={slug} href={'/blog/' + slug} className="block bg-white rounded-xl p-6 shadow-[0_4px_6px_-1px_rgb(0_0_0/0.08)] hover:shadow-[0_6px_12px_-2px_rgb(0_0_0/0.12)] transition-shadow">
+            <a key={slug} href={'/blog/' + slug} className="block bg-white rounded-lg p-6 shadow-[0_4px_6px_-1px_rgb(0_0_0/0.08)] hover:shadow-[0_6px_12px_-2px_rgb(0_0_0/0.12)] transition-shadow">
               <div className={"inline-block text-[10px] font-semibold tracking-[0.08em] uppercase px-2.5 py-1 rounded mb-3 " + (tagColors[tag] || 'text-blue-600 bg-blue-50')}>{tag}</div>
               <h2 className="text-[17px] font-bold text-gray-900 mb-2 leading-snug">{title}</h2>
               <p className="text-[14px] text-gray-500 leading-relaxed">{description}</p>
@@ -128,7 +128,7 @@ export default function BlogPage() {
           ))}
         </div>
 
-        <div className="bg-white rounded-xl shadow-[0_4px_6px_-1px_rgb(0_0_0/0.08)] flex items-center justify-center text-gray-300 text-xs uppercase tracking-widest font-medium mt-10" style={{ minHeight: 80 }}>Advertisement</div>
+        <div className="bg-white rounded-lg shadow-[0_4px_6px_-1px_rgb(0_0_0/0.08)] flex items-center justify-center text-gray-300 text-xs uppercase tracking-widest font-medium mt-10" style={{ minHeight: 80 }}>Advertisement</div>
       </div>
     </div>
   );

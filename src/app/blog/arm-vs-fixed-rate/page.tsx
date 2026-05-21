@@ -112,7 +112,7 @@ export default function ARMvsFixedRatePage() {
             Lower rate upfront, real risk after year five. That's the deal an ARM offers — and whether it's worth it depends entirely on your timeline, the size of today's rate spread, and whether you could stomach a worst-case payment jump without selling. I've run these numbers for a lot of people. Here's how to do it yourself so you're not guessing.
           </p>
 
-          <div className="bg-white rounded-xl p-6 shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)] mb-10">
+          <div className="bg-white rounded-lg p-6 shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)] mb-10">
             <div className="text-[10px] font-semibold tracking-[0.08em] uppercase text-gray-400 mb-3">Table of Contents</div>
             <ol className="space-y-2">
               {[
@@ -150,7 +150,7 @@ export default function ARMvsFixedRatePage() {
             The initial cap limits how much the rate can increase at the first adjustment. The periodic cap limits how much the rate can change at any subsequent adjustment. The lifetime cap limits how much the rate can ever increase above the original note rate.
           </p>
 
-          <div className="bg-white rounded-xl shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)] overflow-hidden mb-6">
+          <div className="bg-white rounded-lg shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)] overflow-hidden mb-6">
             <table className="w-full text-[13px]" style={{ fontVariantNumeric: 'tabular-nums' }}>
               <thead>
                 <tr className="bg-[#F8F9FA]">
@@ -224,7 +224,7 @@ export default function ARMvsFixedRatePage() {
             High-income borrowers with significant liquid assets who can absorb worst-case payment increases without stress sometimes prefer ARMs to maximize cash flow during the fixed period. For most borrowers with standard income profiles and limited reserves the certainty of a fixed rate is worth the premium.
           </p>
 
-          <div className="bg-white rounded-xl p-6 shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)] mb-10">
+          <div className="bg-white rounded-lg p-6 shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)] mb-10">
             <a href="/mortgage-calculator" className="block w-full text-center text-white font-bold text-[15px] py-3.5 rounded-lg hover:opacity-90 transition-opacity" style={{ background: 'linear-gradient(135deg,#0058c3,#0070f3)' }}>
               Compare ARM vs Fixed Rate Payments Free
             </a>
@@ -234,20 +234,20 @@ export default function ARMvsFixedRatePage() {
           <h2 id="faq" className="text-[22px] font-bold tracking-tight text-gray-900 mb-6 mt-10">Frequently Asked Questions</h2>
           <div className="space-y-4">
             {faqs.map(({ q, a }) => (
-              <div key={q} className="bg-white rounded-xl p-5 shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)]">
+              <div key={q} className="bg-white rounded-lg p-5 shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)]">
                 <div className="text-[14px] font-semibold text-gray-900 mb-2">{q}</div>
                 <div className="text-[14px] text-gray-500 leading-relaxed">{a}</div>
               </div>
             ))}
           </div>
 
-          <div className="mt-12 pt-8 border-t border-gray-100">
+          <div className="mt-12 pt-8">
             <p className="text-xs text-gray-400 leading-relaxed">
               Figures on this page are for educational purposes only. ARM rate adjustments depend on market index movements that cannot be predicted. Worst-case scenarios are illustrative. Truly Free Mortgage Calculator does not collect personal data and does not connect users with lenders.
             </p>
           </div>
 
-          <div className="mt-12 pt-8 border-t border-gray-100">
+          <div className="mt-12 pt-8">
             <h2 className="text-[18px] font-bold text-gray-900 mb-4">Related Guides</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[

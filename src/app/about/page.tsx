@@ -38,7 +38,7 @@ export default function AboutPage() {
           </div>
         </nav>
         <div className="max-w-2xl mx-auto px-4 sm:px-6 pt-16 pb-24">
-          <div className="bg-white rounded-xl shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)] p-10">
+          <div className="bg-white rounded-lg shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)] p-10">
             <div className="flex flex-col sm:flex-row items-start gap-8 mb-10">
               <div className="flex-shrink-0">
                 <Image src="/george-smith.png" alt="George Smith — Founder, Klickify Agency" width={96} height={96} style={{ borderRadius: "50%", objectFit: "cover" }} />
@@ -59,7 +59,7 @@ export default function AboutPage() {
               <p>I run Klickify Agency, a small digital agency focused on building tools that actually work for people. Truly Free Mortgage is part of a broader ecosystem of free utilities — same philosophy across all of them: zero friction, client-side processing, and no hidden business model.</p>
               <p>If you have feedback or found a bug, email me directly. I read every message.</p>
             </div>
-            <div className="mt-10 pt-8 border-t border-[rgba(74,85,104,0.1)] flex flex-col sm:flex-row gap-3">
+            <div className="mt-10 pt-8 flex flex-col sm:flex-row gap-3">
               <a href="/mortgage-calculator" className="inline-flex items-center justify-center px-5 py-2.5 bg-[#0058c3] text-white text-sm font-semibold rounded-lg hover:bg-[#0070f3] transition-colors">Use the Calculator</a>
               <a href="mailto:info@klickifyagency.com" className="inline-flex items-center justify-center px-5 py-2.5 bg-[#F8F9FA] text-[#4a5568] text-sm font-semibold rounded-lg hover:bg-[#e2e8f0] transition-colors">Send Feedback</a>
             </div>

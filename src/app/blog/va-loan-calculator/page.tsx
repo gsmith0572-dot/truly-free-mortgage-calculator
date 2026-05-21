@@ -119,7 +119,7 @@ export default function VALoanCalculatorPage() {
             No down payment. No PMI. And rates that genuinely beat most conventional loans. The VA loan is the best mortgage deal in the country for anyone who qualifies — and most eligible borrowers don't fully understand what they're entitled to. Here's everything you need to calculate your exact payment, including the funding fee that most calculators quietly ignore.
           </p>
 
-          <div className="bg-white rounded-xl p-6 shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)] mb-10">
+          <div className="bg-white rounded-lg p-6 shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)] mb-10">
             <div className="text-[10px] font-semibold tracking-[0.08em] uppercase text-gray-400 mb-3">Table of Contents</div>
             <ol className="space-y-2">
               {[
@@ -168,7 +168,7 @@ export default function VALoanCalculatorPage() {
             The VA funding fee is a one-time charge that helps sustain the VA loan program for future generations of veterans. It is not paid to the lender — it goes directly to the Department of Veterans Affairs. The fee varies based on your down payment amount, whether this is your first VA loan use, and your service category.
           </p>
 
-          <div className="bg-white rounded-xl shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)] overflow-hidden mb-6">
+          <div className="bg-white rounded-lg shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)] overflow-hidden mb-6">
             <table className="w-full text-[13px]" style={{ fontVariantNumeric: 'tabular-nums' }}>
               <thead>
                 <tr className="bg-[#F8F9FA]">
@@ -209,7 +209,7 @@ export default function VALoanCalculatorPage() {
           <p className="text-[15px] text-gray-500 leading-relaxed mb-4">
             On a $400,000 purchase the financial advantage of the VA loan becomes concrete when you compare total monthly costs side by side.
           </p>
-          <div className="bg-white rounded-xl shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)] overflow-hidden mb-6">
+          <div className="bg-white rounded-lg shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)] overflow-hidden mb-6">
             <table className="w-full text-[13px]" style={{ fontVariantNumeric: 'tabular-nums' }}>
               <thead>
                 <tr className="bg-[#F8F9FA]">
@@ -249,7 +249,7 @@ export default function VALoanCalculatorPage() {
             Every calculation runs in your browser. Your financial data never reaches a server. Use it as many times as you need to model different purchase prices, down payment amounts, and funding fee scenarios.
           </p>
 
-          <div className="bg-white rounded-xl p-6 shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)] mb-10">
+          <div className="bg-white rounded-lg p-6 shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)] mb-10">
             <a href="/mortgage-calculator" className="block w-full text-center text-white font-bold text-[15px] py-3.5 rounded-lg hover:opacity-90 transition-opacity" style={{ background: 'linear-gradient(135deg,#0058c3,#0070f3)' }}>
               Calculate Your VA Loan Payment Free
             </a>
@@ -259,20 +259,20 @@ export default function VALoanCalculatorPage() {
           <h2 id="faq" className="text-[22px] font-bold tracking-tight text-gray-900 mb-6 mt-10">Frequently Asked Questions</h2>
           <div className="space-y-4">
             {faqs.map(({ q, a }) => (
-              <div key={q} className="bg-white rounded-xl p-5 shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)]">
+              <div key={q} className="bg-white rounded-lg p-5 shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)]">
                 <div className="text-[14px] font-semibold text-gray-900 mb-2">{q}</div>
                 <div className="text-[14px] text-gray-500 leading-relaxed">{a}</div>
               </div>
             ))}
           </div>
 
-          <div className="mt-12 pt-8 border-t border-gray-100">
+          <div className="mt-12 pt-8">
             <p className="text-xs text-gray-400 leading-relaxed">
               Figures on this page are for educational purposes only. VA loan eligibility, funding fees, and program terms are set by the Department of Veterans Affairs and subject to change. Consult a VA-approved lender for loan-specific figures. Truly Free Mortgage Calculator does not collect personal data and does not connect users with lenders.
             </p>
           </div>
 
-          <div className="mt-12 pt-8 border-t border-gray-100">
+          <div className="mt-12 pt-8">
             <h2 className="text-[18px] font-bold text-gray-900 mb-4">Related Guides</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[

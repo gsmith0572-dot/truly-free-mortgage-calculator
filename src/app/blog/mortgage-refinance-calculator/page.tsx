@@ -38,7 +38,7 @@ export default function RefinanceCalculator() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: faqJsonLd }} />
       <div className="min-h-screen bg-gray-50">
-        <nav className="bg-white border-b border-gray-200 px-6 h-20 flex items-center justify-between">
+        <nav className="bg-white px-6 h-20 flex items-center justify-between">
           <a href="/mortgage-calculator">
             <img src="/logo.png" alt="Truly Free Mortgage Calculator" style={{ height: '60px', width: 'auto', objectFit: 'contain' }} />
           </a>
@@ -47,12 +47,12 @@ export default function RefinanceCalculator() {
             <a href="/blog" className="text-sm text-gray-500 hover:text-gray-700">Blog</a>
           </div>
         </nav>
-        <div className="bg-white border-b border-gray-200 px-6 py-2 flex items-center justify-center gap-2">
+        <div className="bg-white px-6 py-2 flex items-center justify-center gap-2">
           <span className="bg-blue-600 text-white text-xs font-bold tracking-widest px-2 py-0.5 rounded">TRULY FREE</span>
           <span className="text-xs text-gray-500">No registration. No email. No limits. Your data never leaves your browser.</span>
         </div>
         <div className="max-w-3xl mx-auto px-4 sm:px-6 pt-10 pb-16">
-          <div className="bg-white rounded-xl shadow-[0_4px_6px_-1px_rgb(0_0_0/0.08)] flex items-center justify-center text-gray-300 text-xs uppercase tracking-widest font-medium mb-8" style={{ minHeight: 80 }}>Advertisement</div>
+          <div className="bg-white rounded-lg shadow-[0_4px_6px_-1px_rgb(0_0_0/0.08)] flex items-center justify-center text-gray-300 text-xs uppercase tracking-widest font-medium mb-8" style={{ minHeight: 80 }}>Advertisement</div>
           <div className="mb-2">
             <span className="inline-block bg-blue-50 text-blue-600 text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full">Refinancing</span>
           </div>
@@ -65,7 +65,7 @@ export default function RefinanceCalculator() {
             </div>
           </div>
           <p className="text-lg text-gray-600 mb-8 leading-relaxed">Refinancing without calculating your break-even point is a financial error. Lenders benefit from every refinance regardless of whether it helps you — they collect new origination fees and reset your amortization schedule. This guide gives you the exact formula to determine whether refinancing produces a net financial gain in your specific situation.</p>
-          <a href="/mortgage-calculator" className="block bg-blue-600 text-white rounded-xl p-5 mb-10 hover:bg-blue-700 transition-colors">
+          <a href="/mortgage-calculator" className="block bg-blue-600 text-white rounded-lg p-5 mb-10 hover:bg-blue-700 transition-colors">
             <p className="text-xs font-semibold uppercase tracking-widest opacity-75 mb-1">Free Tool</p>
             <p className="text-lg font-bold">Model your refinance scenario — no email required</p>
             <p className="text-sm opacity-75 mt-1">Use Scenario Comparison to compare your current loan vs new terms</p>
@@ -73,12 +73,12 @@ export default function RefinanceCalculator() {
 
           <h2 className="text-xl font-bold text-gray-900 mb-3">The Break-Even Point Formula</h2>
           <p className="text-gray-600 mb-4 leading-relaxed">The break-even point is the month in which your cumulative monthly savings equal your total refinance closing costs. Before that month, refinancing has cost you money. After it, refinancing saves you money.</p>
-          <div className="bg-gray-50 rounded-xl p-5 mb-6">
+          <div className="bg-gray-50 rounded-lg p-5 mb-6">
             <p className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-3">Formula</p>
             <p className="text-sm font-mono text-gray-800 mb-2">Break-Even Month = Total Closing Costs / Monthly Payment Savings</p>
             <p className="text-xs text-gray-500">If you plan to stay in the home beyond the break-even month, refinancing produces a net financial gain.</p>
           </div>
-          <div className="bg-white rounded-xl shadow-[0_4px_6px_-1px_rgb(0_0_0/0.08)] p-5 mb-8">
+          <div className="bg-white rounded-lg shadow-[0_4px_6px_-1px_rgb(0_0_0/0.08)] p-5 mb-8">
             <p className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-3">Example Calculation</p>
             <p className="text-sm text-gray-500 mb-4">$350,000 loan — refinancing from 7.5% to 6.75% — $8,000 closing costs</p>
             {[
@@ -99,7 +99,7 @@ export default function RefinanceCalculator() {
 
           <h2 className="text-xl font-bold text-gray-900 mb-3">Refinance Closing Costs: What You Will Actually Pay</h2>
           <p className="text-gray-600 mb-4 leading-relaxed">Lenders frequently advertise refinance options with vague or understated cost disclosures. The actual closing costs on a refinance typically range from 2% to 5% of the loan amount and include the following line items:</p>
-          <div className="bg-white rounded-xl shadow-[0_4px_6px_-1px_rgb(0_0_0/0.08)] overflow-hidden mb-8">
+          <div className="bg-white rounded-lg shadow-[0_4px_6px_-1px_rgb(0_0_0/0.08)] overflow-hidden mb-8">
             <table className="w-full text-sm" style={{ fontVariantNumeric: 'tabular-nums' }}>
               <thead className="bg-gray-50">
                 <tr>
@@ -135,7 +135,7 @@ export default function RefinanceCalculator() {
           <p className="text-gray-600 mb-8 leading-relaxed">A borrower who is 7 years into a 30-year mortgage and refinances into a new 30-year loan will make mortgage payments for 37 total years rather than 30. Even if the monthly payment decreases, the extended timeline can increase total lifetime interest paid. Refinancing into a 20-year or 15-year loan avoids this problem by maintaining or accelerating the payoff timeline.</p>
 
           <h2 className="text-xl font-bold text-gray-900 mb-3">Rate Reduction Required to Justify Refinancing</h2>
-          <div className="bg-white rounded-xl shadow-[0_4px_6px_-1px_rgb(0_0_0/0.08)] overflow-hidden mb-8">
+          <div className="bg-white rounded-lg shadow-[0_4px_6px_-1px_rgb(0_0_0/0.08)] overflow-hidden mb-8">
             <table className="w-full text-sm" style={{ fontVariantNumeric: 'tabular-nums' }}>
               <thead className="bg-gray-50">
                 <tr>
@@ -161,7 +161,7 @@ export default function RefinanceCalculator() {
             </table>
           </div>
 
-          <div className="bg-white rounded-xl shadow-[0_4px_6px_-1px_rgb(0_0_0/0.08)] flex items-center justify-center text-gray-300 text-xs uppercase tracking-widest font-medium mb-10" style={{ minHeight: 80 }}>Advertisement</div>
+          <div className="bg-white rounded-lg shadow-[0_4px_6px_-1px_rgb(0_0_0/0.08)] flex items-center justify-center text-gray-300 text-xs uppercase tracking-widest font-medium mb-10" style={{ minHeight: 80 }}>Advertisement</div>
 
           <h2 className="text-xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
           <div className="space-y-5">
@@ -172,13 +172,13 @@ export default function RefinanceCalculator() {
               ['What is a good interest rate reduction to refinance?','The traditional rule of thumb is 1% or more. However, even a 0.5% reduction can be worthwhile on larger balances or when closing costs are low. Always calculate your specific break-even point rather than relying on general rules.'],
               ['Should I refinance to a 15-year or 30-year loan?','Refinancing to a 15-year loan increases your monthly payment but dramatically reduces total interest and builds equity faster. A new 30-year loan lowers your payment but restarts the amortization clock, potentially increasing lifetime interest paid.'],
             ].map(([q,a]) => (
-              <div key={String(q)} className="bg-white rounded-xl shadow-[0_4px_6px_-1px_rgb(0_0_0/0.08)] p-5">
+              <div key={String(q)} className="bg-white rounded-lg shadow-[0_4px_6px_-1px_rgb(0_0_0/0.08)] p-5">
                 <p className="font-semibold text-gray-900 mb-2">{q}</p>
                 <p className="text-sm text-gray-600 leading-relaxed">{a}</p>
               </div>
             ))}
           </div>
-          <div className="mt-10 pt-8 border-t border-gray-200">
+          <div className="mt-10 pt-8">
             <p className="text-xs text-gray-400 leading-relaxed">Figures on this page are for educational purposes only. Actual refinance costs, savings, and break-even timelines depend on lender-specific fees and current market rates. Truly Free Mortgage Calculator does not collect personal data and does not connect users with lenders.</p>
           </div>
           <AuthorBox />

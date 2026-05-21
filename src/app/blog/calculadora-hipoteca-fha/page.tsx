@@ -113,7 +113,7 @@ export default function CalculadoraHipotecaFHAPage() {
             El 3.5% de pago inicial suena bien. Lo que nadie te dice es que el MIP se queda contigo durante toda la vida del préstamo si no pones el 10%. Eso cambia el cálculo completamente. Muchos compradores no lo anticipan y se sorprenden cuando ven su pago real. Aquí está todo lo que necesitas para calcular tu pago mensual exacto — sin estimaciones vagas, con los números de verdad.
           </p>
 
-          <div className="bg-white rounded-xl p-6 shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)] mb-10">
+          <div className="bg-white rounded-lg p-6 shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)] mb-10">
             <div className="text-[10px] font-semibold tracking-[0.08em] uppercase text-gray-400 mb-3">Contenido</div>
             <ol className="space-y-2">
               {[
@@ -162,7 +162,7 @@ export default function CalculadoraHipotecaFHAPage() {
             El MIP anual es actualmente el 0.55% del balance del préstamo para la mayoría de los préstamos FHA a 30 años con menos del 10% de pago inicial. Este cargo se divide entre 12 y se añade a cada pago mensual. En un préstamo de $350,000 el MIP anual inicial es $1,925, o $160 por mes.
           </p>
 
-          <div className="bg-white rounded-xl shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)] overflow-hidden mb-6">
+          <div className="bg-white rounded-lg shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)] overflow-hidden mb-6">
             <table className="w-full text-[13px]" style={{ fontVariantNumeric: 'tabular-nums' }}>
               <thead>
                 <tr className="bg-[#F8F9FA]">
@@ -207,7 +207,7 @@ export default function CalculadoraHipotecaFHAPage() {
             Para un comprador con puntaje de crédito de 720 y 5% de pago inicial, la comparación entre FHA y convencional muestra resultados sorprendentes.
           </p>
 
-          <div className="bg-white rounded-xl shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)] overflow-hidden mb-6">
+          <div className="bg-white rounded-lg shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)] overflow-hidden mb-6">
             <table className="w-full text-[13px]" style={{ fontVariantNumeric: 'tabular-nums' }}>
               <thead>
                 <tr className="bg-[#F8F9FA]">
@@ -246,7 +246,7 @@ export default function CalculadoraHipotecaFHAPage() {
             Todos los cálculos se ejecutan en tu navegador. Tus datos financieros nunca llegan a ningún servidor. Gratis para siempre.
           </p>
 
-          <div className="bg-white rounded-xl p-6 shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)] mb-10">
+          <div className="bg-white rounded-lg p-6 shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)] mb-10">
             <a href="/mortgage-calculator" className="block w-full text-center text-white font-bold text-[15px] py-3.5 rounded-lg hover:opacity-90 transition-opacity" style={{ background: 'linear-gradient(135deg,#0058c3,#0070f3)' }}>
               Calcular Mi Pago FHA Gratis
             </a>
@@ -256,20 +256,20 @@ export default function CalculadoraHipotecaFHAPage() {
           <h2 id="faq" className="text-[22px] font-bold tracking-tight text-gray-900 mb-6 mt-10">Preguntas Frecuentes</h2>
           <div className="space-y-4">
             {faqs.map(({ q, a }) => (
-              <div key={q} className="bg-white rounded-xl p-5 shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)]">
+              <div key={q} className="bg-white rounded-lg p-5 shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)]">
                 <div className="text-[14px] font-semibold text-gray-900 mb-2">{q}</div>
                 <div className="text-[14px] text-gray-500 leading-relaxed">{a}</div>
               </div>
             ))}
           </div>
 
-          <div className="mt-12 pt-8 border-t border-gray-100">
+          <div className="mt-12 pt-8">
             <p className="text-xs text-gray-400 leading-relaxed">
               La información en esta página es de carácter educativo. Las tasas MIP, límites de préstamo y requisitos FHA son establecidos por HUD y pueden cambiar. Consulta con un prestamista aprobado por la FHA para cifras específicas a tu situación. Truly Free Mortgage Calculator no recopila datos personales y no conecta usuarios con prestamistas.
             </p>
           </div>
 
-          <div className="mt-12 pt-8 border-t border-gray-100">
+          <div className="mt-12 pt-8">
             <h2 className="text-[18px] font-bold text-gray-900 mb-4">Guías Relacionadas</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[

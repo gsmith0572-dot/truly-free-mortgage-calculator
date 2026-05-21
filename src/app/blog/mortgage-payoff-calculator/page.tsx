@@ -112,7 +112,7 @@ export default function MortgagePayoffCalculatorPage() {
             You're paying more in interest than you think. On a $400k loan at 6.5%, your first payment sends $2,167 to the bank and only $361 toward what you actually owe. Every extra dollar you put toward principal breaks that cycle — and the impact compounds. The results aren't marginal; they're dramatic. Here's exactly how accelerated payoff works, what it's worth in real numbers, and how to make sure your lender doesn't quietly waste your extra payment.
           </p>
 
-          <div className="bg-white rounded-xl p-6 shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)] mb-10">
+          <div className="bg-white rounded-lg p-6 shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)] mb-10">
             <div className="text-[10px] font-semibold tracking-[0.08em] uppercase text-gray-400 mb-3">Table of Contents</div>
             <ol className="space-y-2">
               {[
@@ -147,7 +147,7 @@ export default function MortgagePayoffCalculatorPage() {
             There are three primary methods for accelerating mortgage payoff, each with different mechanics and cash flow implications.
           </p>
 
-          <div className="bg-white rounded-xl shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)] overflow-hidden mb-6">
+          <div className="bg-white rounded-lg shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)] overflow-hidden mb-6">
             <table className="w-full text-[13px]" style={{ fontVariantNumeric: 'tabular-nums' }}>
               <thead>
                 <tr className="bg-[#F8F9FA]">
@@ -221,7 +221,7 @@ export default function MortgagePayoffCalculatorPage() {
             If your servicer does not offer a clear mechanism for designating principal-only payments, call their customer service line and get the correct procedure in writing. Servicers are legally required to apply designated principal payments correctly under the Real Estate Settlement Procedures Act.
           </p>
 
-          <div className="bg-white rounded-xl p-6 shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)] mb-10">
+          <div className="bg-white rounded-lg p-6 shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)] mb-10">
             <a href="/mortgage-calculator" className="block w-full text-center text-white font-bold text-[15px] py-3.5 rounded-lg hover:opacity-90 transition-opacity" style={{ background: 'linear-gradient(135deg,#0058c3,#0070f3)' }}>
               Calculate Your Payoff Acceleration Free
             </a>
@@ -231,20 +231,20 @@ export default function MortgagePayoffCalculatorPage() {
           <h2 id="faq" className="text-[22px] font-bold tracking-tight text-gray-900 mb-6 mt-10">Frequently Asked Questions</h2>
           <div className="space-y-4">
             {faqs.map(({ q, a }) => (
-              <div key={q} className="bg-white rounded-xl p-5 shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)]">
+              <div key={q} className="bg-white rounded-lg p-5 shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)]">
                 <div className="text-[14px] font-semibold text-gray-900 mb-2">{q}</div>
                 <div className="text-[14px] text-gray-500 leading-relaxed">{a}</div>
               </div>
             ))}
           </div>
 
-          <div className="mt-12 pt-8 border-t border-gray-100">
+          <div className="mt-12 pt-8">
             <p className="text-xs text-gray-400 leading-relaxed">
               Figures on this page are for educational purposes only. Interest savings calculations are approximate and based on illustrative loan parameters. Investment return comparisons use historical averages which do not guarantee future performance. Truly Free Mortgage Calculator does not collect personal data and does not connect users with lenders.
             </p>
           </div>
 
-          <div className="mt-12 pt-8 border-t border-gray-100">
+          <div className="mt-12 pt-8">
             <h2 className="text-[18px] font-bold text-gray-900 mb-4">Related Guides</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[

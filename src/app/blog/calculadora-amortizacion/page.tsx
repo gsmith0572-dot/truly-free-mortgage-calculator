@@ -122,7 +122,7 @@ export default function CalculadoraAmortizacionPage() {
             Tu pago mensual no cambia. Lo que hay adentro, sí. En los primeros años de tu hipoteca, la mayoría de cada pago va a intereses — no al capital que debes. Eso no es un truco; es matemática pura. Pero una vez que entiendes cómo funciona la amortización, también entiendes por qué los pagos extra al inicio importan tanto más que los del final. Aquí está cómo leer tu tabla, generarla gratis y usarla para tomar decisiones más inteligentes.
           </p>
 
-          <div className="bg-white rounded-xl p-6 shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)] mb-10">
+          <div className="bg-white rounded-lg p-6 shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)] mb-10">
             <div className="text-[10px] font-semibold tracking-[0.08em] uppercase text-gray-400 mb-3">Contenido</div>
             <ol className="space-y-2">
               {[
@@ -193,7 +193,7 @@ export default function CalculadoraAmortizacionPage() {
             La diferencia entre una tabla de amortización a 15 y a 30 años es una de las decisiones financieras más importantes que toma un comprador de vivienda.
           </p>
 
-          <div className="bg-white rounded-xl shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)] overflow-hidden mb-6">
+          <div className="bg-white rounded-lg shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)] overflow-hidden mb-6">
             <table className="w-full text-[13px]" style={{ fontVariantNumeric: 'tabular-nums' }}>
               <thead>
                 <tr className="bg-[#F8F9FA]">
@@ -232,7 +232,7 @@ export default function CalculadoraAmortizacionPage() {
             El motor de cálculo corre completamente en el lado del cliente. Tus datos financieros nunca llegan a un servidor. No hay backend que los reciba. Gratis para siempre, no gratis por 14 días.
           </p>
 
-          <div className="bg-white rounded-xl p-6 shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)] mb-10">
+          <div className="bg-white rounded-lg p-6 shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)] mb-10">
             <a href="/mortgage-calculator" className="block w-full text-center text-white font-bold text-[15px] py-3.5 rounded-lg hover:opacity-90 transition-opacity" style={{ background: 'linear-gradient(135deg,#0058c3,#0070f3)' }}>
               Generar Mi Tabla de Amortización Gratis
             </a>
@@ -242,20 +242,20 @@ export default function CalculadoraAmortizacionPage() {
           <h2 id="faq" className="text-[22px] font-bold tracking-tight text-gray-900 mb-6 mt-10">Preguntas Frecuentes</h2>
           <div className="space-y-4">
             {faqs.map(({ q, a }) => (
-              <div key={q} className="bg-white rounded-xl p-5 shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)]">
+              <div key={q} className="bg-white rounded-lg p-5 shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)]">
                 <div className="text-[14px] font-semibold text-gray-900 mb-2">{q}</div>
                 <div className="text-[14px] text-gray-500 leading-relaxed">{a}</div>
               </div>
             ))}
           </div>
 
-          <div className="mt-12 pt-8 border-t border-gray-100">
+          <div className="mt-12 pt-8">
             <p className="text-xs text-gray-400 leading-relaxed">
               La información en esta página es de carácter educativo. Las cifras ilustrativas varían según las condiciones reales del préstamo. Truly Free Mortgage Calculator no recopila datos personales y no conecta usuarios con prestamistas.
             </p>
           </div>
 
-          <div className="mt-12 pt-8 border-t border-gray-100">
+          <div className="mt-12 pt-8">
             <h2 className="text-[18px] font-bold text-gray-900 mb-4">Guías Relacionadas</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[

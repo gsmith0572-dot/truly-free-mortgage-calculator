@@ -112,7 +112,7 @@ export default function InvestmentPropertyCalculatorPage() {
             The mortgage is the easy part. It's the cash flow math that trips people up. You're looking at rate premiums of 0.5% to 0.875% over primary residence rates, stricter reserve requirements, and a set of metrics — cap rate, cash-on-cash return — that don't apply to anything else in personal finance. I've seen deals that looked profitable on paper fall apart once you actually model the expenses. Here's how to run the numbers before you make an offer.
           </p>
 
-          <div className="bg-white rounded-xl p-6 shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)] mb-10">
+          <div className="bg-white rounded-lg p-6 shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)] mb-10">
             <div className="text-[10px] font-semibold tracking-[0.08em] uppercase text-gray-400 mb-3">Table of Contents</div>
             <ol className="space-y-2">
               {[
@@ -158,7 +158,7 @@ export default function InvestmentPropertyCalculatorPage() {
             Standard expense categories include property taxes, insurance, property management (typically 8% to 10% of gross rent), maintenance and repairs (budget 1% of property value annually), vacancy allowance (typically 5% to 8% of gross rent), and capital expenditure reserves for major items like roof, HVAC, and appliances.
           </p>
 
-          <div className="bg-white rounded-xl shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)] overflow-hidden mb-6">
+          <div className="bg-white rounded-lg shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)] overflow-hidden mb-6">
             <table className="w-full text-[13px]" style={{ fontVariantNumeric: 'tabular-nums' }}>
               <thead>
                 <tr className="bg-[#F8F9FA]">
@@ -222,7 +222,7 @@ export default function InvestmentPropertyCalculatorPage() {
             Every calculation runs in your browser. Your financial data never reaches a server. Free forever.
           </p>
 
-          <div className="bg-white rounded-xl p-6 shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)] mb-10">
+          <div className="bg-white rounded-lg p-6 shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)] mb-10">
             <a href="/mortgage-calculator" className="block w-full text-center text-white font-bold text-[15px] py-3.5 rounded-lg hover:opacity-90 transition-opacity" style={{ background: 'linear-gradient(135deg,#0058c3,#0070f3)' }}>
               Calculate Your Investment Property Payment Free
             </a>
@@ -232,20 +232,20 @@ export default function InvestmentPropertyCalculatorPage() {
           <h2 id="faq" className="text-[22px] font-bold tracking-tight text-gray-900 mb-6 mt-10">Frequently Asked Questions</h2>
           <div className="space-y-4">
             {faqs.map(({ q, a }) => (
-              <div key={q} className="bg-white rounded-xl p-5 shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)]">
+              <div key={q} className="bg-white rounded-lg p-5 shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)]">
                 <div className="text-[14px] font-semibold text-gray-900 mb-2">{q}</div>
                 <div className="text-[14px] text-gray-500 leading-relaxed">{a}</div>
               </div>
             ))}
           </div>
 
-          <div className="mt-12 pt-8 border-t border-gray-100">
+          <div className="mt-12 pt-8">
             <p className="text-xs text-gray-400 leading-relaxed">
               Figures on this page are for educational purposes only and do not constitute investment advice. Actual financing terms, rental income, and investment returns vary significantly by market and individual circumstances. Truly Free Mortgage Calculator does not collect personal data and does not connect users with lenders.
             </p>
           </div>
 
-          <div className="mt-12 pt-8 border-t border-gray-100">
+          <div className="mt-12 pt-8">
             <h2 className="text-[18px] font-bold text-gray-900 mb-4">Related Guides</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[

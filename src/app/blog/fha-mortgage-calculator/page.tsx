@@ -58,7 +58,7 @@ export default function FHAMortgageCalculator() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: faqJsonLd }} />
       <div className="min-h-screen bg-gray-50">
-        <nav className="bg-white border-b border-gray-200 px-6 h-20 flex items-center justify-between">
+        <nav className="bg-white px-6 h-20 flex items-center justify-between">
           <a href="/mortgage-calculator">
             <img src="/logo.png" alt="Truly Free Mortgage Calculator" style={{ height: '60px', width: 'auto', objectFit: 'contain' }} />
           </a>
@@ -67,12 +67,12 @@ export default function FHAMortgageCalculator() {
             <a href="/blog" className="text-sm text-gray-500 hover:text-gray-700">Blog</a>
           </div>
         </nav>
-        <div className="bg-white border-b border-gray-200 px-6 py-2 flex items-center justify-center gap-2">
+        <div className="bg-white px-6 py-2 flex items-center justify-center gap-2">
           <span className="bg-blue-600 text-white text-xs font-bold tracking-widest px-2 py-0.5 rounded">TRULY FREE</span>
           <span className="text-xs text-gray-500">No registration. No email. No limits. Your data never leaves your browser.</span>
         </div>
         <div className="max-w-3xl mx-auto px-4 sm:px-6 pt-10 pb-16">
-          <div className="bg-white rounded-xl shadow-[0_4px_6px_-1px_rgb(0_0_0/0.08)] flex items-center justify-center text-gray-300 text-xs uppercase tracking-widest font-medium mb-8" style={{ minHeight: 80 }}>Advertisement</div>
+          <div className="bg-white rounded-lg shadow-[0_4px_6px_-1px_rgb(0_0_0/0.08)] flex items-center justify-center text-gray-300 text-xs uppercase tracking-widest font-medium mb-8" style={{ minHeight: 80 }}>Advertisement</div>
           <div className="mb-2">
             <span className="inline-block bg-blue-50 text-blue-600 text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full">FHA Loans</span>
           </div>
@@ -90,7 +90,7 @@ export default function FHAMortgageCalculator() {
             The FHA loan is the most misunderstood mortgage product in the United States. Lenders market its low 3.5% down payment prominently while burying the true cost of Mortgage Insurance Premium (MIP) in footnotes. This guide gives you the technical formula to calculate your exact FHA payment — including both upfront and annual MIP — with zero data collection on our end.
           </p>
 
-          <a href="/mortgage-calculator" className="block bg-blue-600 text-white rounded-xl p-5 mb-10 hover:bg-blue-700 transition-colors">
+          <a href="/mortgage-calculator" className="block bg-blue-600 text-white rounded-lg p-5 mb-10 hover:bg-blue-700 transition-colors">
             <p className="text-xs font-semibold uppercase tracking-widest opacity-75 mb-1">Free Tool</p>
             <p className="text-lg font-bold">Calculate your FHA payment now — no email required</p>
             <p className="text-sm opacity-75 mt-1">Enable PMI toggle to include mortgage insurance in your calculation</p>
@@ -105,7 +105,7 @@ export default function FHAMortgageCalculator() {
           </p>
 
           <h2 className="text-xl font-bold text-gray-900 mb-3">FHA Down Payment Requirements by Credit Score</h2>
-          <div className="bg-white rounded-xl shadow-[0_4px_6px_-1px_rgb(0_0_0/0.08)] overflow-hidden mb-8">
+          <div className="bg-white rounded-lg shadow-[0_4px_6px_-1px_rgb(0_0_0/0.08)] overflow-hidden mb-8">
             <table className="w-full text-sm" style={{ fontVariantNumeric: 'tabular-nums' }}>
               <thead className="bg-gray-50">
                 <tr>
@@ -134,7 +134,7 @@ export default function FHAMortgageCalculator() {
           <p className="text-gray-600 mb-4 leading-relaxed">
             FHA Mortgage Insurance Premium has two separate charges that dramatically increase your total loan cost:
           </p>
-          <div className="bg-gray-50 rounded-xl p-5 mb-6 space-y-4">
+          <div className="bg-gray-50 rounded-lg p-5 mb-6 space-y-4">
             <div>
               <p className="text-sm font-bold text-gray-900 mb-1">1. Upfront MIP (UFMIP)</p>
               <p className="text-sm text-gray-600">Rate: 1.75% of the base loan amount. Paid at closing or rolled into the loan balance. On a $338,000 loan (after 3.5% down on a $350,000 home), UFMIP = $5,915. This amount is added to your loan balance on day one.</p>
@@ -145,7 +145,7 @@ export default function FHAMortgageCalculator() {
             </div>
           </div>
 
-          <div className="bg-white rounded-xl shadow-[0_4px_6px_-1px_rgb(0_0_0/0.08)] p-5 mb-8">
+          <div className="bg-white rounded-lg shadow-[0_4px_6px_-1px_rgb(0_0_0/0.08)] p-5 mb-8">
             <p className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-3">FHA Payment Example</p>
             <p className="text-sm text-gray-500 mb-3">Home price $350,000 — 3.5% down — 6.75% rate — 30 years</p>
             <div className="space-y-2">
@@ -174,7 +174,7 @@ export default function FHAMortgageCalculator() {
           <p className="text-gray-600 mb-4 leading-relaxed">
             For loans originated after June 3, 2013, the rules are straightforward and unfavorable for most borrowers:
           </p>
-          <div className="bg-white rounded-xl shadow-[0_4px_6px_-1px_rgb(0_0_0/0.08)] overflow-hidden mb-8">
+          <div className="bg-white rounded-lg shadow-[0_4px_6px_-1px_rgb(0_0_0/0.08)] overflow-hidden mb-8">
             <table className="w-full text-sm" style={{ fontVariantNumeric: 'tabular-nums' }}>
               <thead className="bg-gray-50">
                 <tr>
@@ -211,7 +211,7 @@ export default function FHAMortgageCalculator() {
             Borrowers with credit scores above 720 and 5% or more to put down will almost always find conventional financing cheaper over a 7-year horizon due to removable PMI. Borrowers with scores between 580 and 679 frequently find FHA rates low enough to offset the perpetual MIP for the first 5 to 7 years. Beyond that window, the permanent MIP erodes the advantage.
           </p>
 
-          <div className="bg-white rounded-xl shadow-[0_4px_6px_-1px_rgb(0_0_0/0.08)] flex items-center justify-center text-gray-300 text-xs uppercase tracking-widest font-medium mb-10" style={{ minHeight: 80 }}>Advertisement</div>
+          <div className="bg-white rounded-lg shadow-[0_4px_6px_-1px_rgb(0_0_0/0.08)] flex items-center justify-center text-gray-300 text-xs uppercase tracking-widest font-medium mb-10" style={{ minHeight: 80 }}>Advertisement</div>
 
           <h2 className="text-xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
           <div className="space-y-5">
@@ -222,14 +222,14 @@ export default function FHAMortgageCalculator() {
               ['Does FHA MIP ever go away?', 'For FHA loans originated after June 3, 2013 with a down payment below 10%, annual MIP remains for the life of the loan. With a down payment of 10% or more, MIP is removed after 11 years. This is why many borrowers refinance into a conventional loan once they reach 20% equity.'],
               ['How does an FHA loan differ from a conventional loan?', 'FHA loans are government-backed, allowing credit scores as low as 580 and down payments of 3.5%. Conventional loans require stronger credit (typically 620 minimum) but PMI is removable at 20% equity. FHA MIP at below 10% down is permanent, making conventional financing cheaper long-term for qualified borrowers.'],
             ].map(([q, a]) => (
-              <div key={String(q)} className="bg-white rounded-xl shadow-[0_4px_6px_-1px_rgb(0_0_0/0.08)] p-5">
+              <div key={String(q)} className="bg-white rounded-lg shadow-[0_4px_6px_-1px_rgb(0_0_0/0.08)] p-5">
                 <p className="font-semibold text-gray-900 mb-2">{q}</p>
                 <p className="text-sm text-gray-600 leading-relaxed">{a}</p>
               </div>
             ))}
           </div>
 
-          <div className="mt-10 pt-8 border-t border-gray-200">
+          <div className="mt-10 pt-8">
             <p className="text-xs text-gray-400 leading-relaxed">
               The calculations and information on this page are for educational purposes only. Actual FHA loan terms, MIP rates, and eligibility requirements are set by HUD and may change. Consult a HUD-approved lender for loan-specific figures. Truly Free Mortgage Calculator does not collect personal data and does not connect users with lenders.
             </p>

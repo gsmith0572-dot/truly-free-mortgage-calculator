@@ -112,7 +112,7 @@ export default function USDARuralHomeLoanCalculatorPage() {
             Most people have never heard of it. That's exactly the problem. The USDA guaranteed loan is a zero-down mortgage available in far more places than you'd expect — we're talking suburbs, small cities, and communities right outside major metro areas. If you've been saving up for a down payment and you qualify, you may not need to wait. Here's how to calculate your payment, confirm your area's eligibility in two minutes, and understand every fee before you talk to a lender.
           </p>
 
-          <div className="bg-white rounded-xl p-6 shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)] mb-10">
+          <div className="bg-white rounded-lg p-6 shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)] mb-10">
             <div className="text-[10px] font-semibold tracking-[0.08em] uppercase text-gray-400 mb-3">Table of Contents</div>
             <ol className="space-y-2">
               {[
@@ -164,7 +164,7 @@ export default function USDARuralHomeLoanCalculatorPage() {
             The annual fee is 0.35% of the remaining loan balance, divided into monthly payments. On a $300,000 loan this starts at $87.50 per month and decreases each year as the balance drops. Compared to FHA annual MIP of 0.55% or conventional PMI of 0.5% to 1.5%, the USDA annual fee is among the lowest available for a zero-down loan.
           </p>
 
-          <div className="bg-white rounded-xl shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)] overflow-hidden mb-6">
+          <div className="bg-white rounded-lg shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)] overflow-hidden mb-6">
             <table className="w-full text-[13px]" style={{ fontVariantNumeric: 'tabular-nums' }}>
               <thead>
                 <tr className="bg-[#F8F9FA]">
@@ -218,7 +218,7 @@ export default function USDARuralHomeLoanCalculatorPage() {
             Use it to model different purchase prices, compare USDA against FHA side by side, and understand exactly where your money goes every month before you ever speak to a lender.
           </p>
 
-          <div className="bg-white rounded-xl p-6 shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)] mb-10">
+          <div className="bg-white rounded-lg p-6 shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)] mb-10">
             <a href="/mortgage-calculator" className="block w-full text-center text-white font-bold text-[15px] py-3.5 rounded-lg hover:opacity-90 transition-opacity" style={{ background: 'linear-gradient(135deg,#0058c3,#0070f3)' }}>
               Calculate Your USDA Loan Payment Free
             </a>
@@ -228,20 +228,20 @@ export default function USDARuralHomeLoanCalculatorPage() {
           <h2 id="faq" className="text-[22px] font-bold tracking-tight text-gray-900 mb-6 mt-10">Frequently Asked Questions</h2>
           <div className="space-y-4">
             {faqs.map(({ q, a }) => (
-              <div key={q} className="bg-white rounded-xl p-5 shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)]">
+              <div key={q} className="bg-white rounded-lg p-5 shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)]">
                 <div className="text-[14px] font-semibold text-gray-900 mb-2">{q}</div>
                 <div className="text-[14px] text-gray-500 leading-relaxed">{a}</div>
               </div>
             ))}
           </div>
 
-          <div className="mt-12 pt-8 border-t border-gray-100">
+          <div className="mt-12 pt-8">
             <p className="text-xs text-gray-400 leading-relaxed">
               Figures on this page are for educational purposes only. USDA loan eligibility, income limits, and guarantee fees are set by the U.S. Department of Agriculture and subject to change. Consult a USDA-approved lender for loan-specific figures. Truly Free Mortgage Calculator does not collect personal data and does not connect users with lenders.
             </p>
           </div>
 
-          <div className="mt-12 pt-8 border-t border-gray-100">
+          <div className="mt-12 pt-8">
             <h2 className="text-[18px] font-bold text-gray-900 mb-4">Related Guides</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[

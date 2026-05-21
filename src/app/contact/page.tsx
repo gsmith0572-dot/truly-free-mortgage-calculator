@@ -19,7 +19,7 @@ export default function ContactPage() {
         </div>
       </nav>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 pt-16 pb-24">
-        <div className="bg-white rounded-xl shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)] p-10">
+        <div className="bg-white rounded-lg shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)] p-10">
           <div className="text-[10px] font-semibold tracking-[0.08em] uppercase text-[#718096] mb-2">Support</div>
           <h1 className="text-2xl font-bold text-[#181c1e] tracking-tight mb-3">Contact</h1>
           <p className="text-[15px] text-[#4a5568] leading-relaxed mb-10">Questions, bug reports, or feedback — email directly. No support ticket system, no chatbot. George reads every message.</p>
