@@ -15,8 +15,8 @@ const jsonLd = {
       'headline': 'VA Loan Calculator: How to Calculate Your Monthly Payment with Zero Down',
       'description': 'A complete guide to VA loan eligibility, funding fees, and how to calculate your monthly payment with no PMI and no down payment required.',
       'datePublished': '2026-05-07',
-      'dateModified': '2026-05-07',
-      'author': { '@type': 'Organization', 'name': 'Truly Free Mortgage' },
+      'dateModified': '2026-05-20',
+      'author': { '@type': 'Person', 'name': 'George Smith', 'url': 'https://www.linkedin.com/in/george-smith-832113217/' },
       'publisher': { '@type': 'Organization', 'name': 'Truly Free Mortgage', 'url': 'https://trulyfreemortgage.com' },
       'mainEntityOfPage': 'https://trulyfreemortgage.com/blog/va-loan-calculator',
     },
@@ -116,7 +116,7 @@ export default function VALoanCalculatorPage() {
           </div>
 
           <p className="text-[16px] text-gray-500 leading-relaxed mb-8">
-            The VA loan is the most powerful mortgage product available to eligible borrowers. No down payment, no private mortgage insurance, and competitive interest rates backed by the Department of Veterans Affairs. Here is everything you need to calculate your payment accurately and understand every cost involved.
+            No down payment. No PMI. And rates that genuinely beat most conventional loans. The VA loan is the best mortgage deal in the country for anyone who qualifies — and most eligible borrowers don't fully understand what they're entitled to. Here's everything you need to calculate your exact payment, including the funding fee that most calculators quietly ignore.
           </p>
 
           <div className="bg-white rounded-xl p-6 shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)] mb-10">
@@ -271,10 +271,27 @@ export default function VALoanCalculatorPage() {
               Figures on this page are for educational purposes only. VA loan eligibility, funding fees, and program terms are set by the Department of Veterans Affairs and subject to change. Consult a VA-approved lender for loan-specific figures. Truly Free Mortgage Calculator does not collect personal data and does not connect users with lenders.
             </p>
           </div>
-        </div>
-      
+
+          <div className="mt-12 pt-8 border-t border-gray-100">
+            <h2 className="text-[18px] font-bold text-gray-900 mb-4">Related Guides</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {[
+                ['/blog/usda-rural-home-loan-calculator', 'USDA Rural Home Loan Calculator', 'Zero-down for eligible rural and suburban areas — more common than you think.'],
+                ['/blog/fha-mortgage-calculator', 'FHA Mortgage Calculator', 'MIP costs, down payment by credit score, FHA vs conventional.'],
+                ['/blog/15-year-vs-30-year-mortgage', '15-Year vs 30-Year Mortgage', '$237,000 difference in total interest on a $300k loan.'],
+                ['/blog/mortgage-payoff-calculator', 'Mortgage Payoff Calculator', 'How extra payments shave years off your loan.'],
+              ].map(([href, title, desc]) => (
+                <a key={String(href)} href={String(href)} className="block bg-white rounded-lg p-4 shadow-[0_2px_4px_-1px_rgb(0_0_0/0.06)] hover:shadow-[0_4px_8px_-2px_rgb(0_0_0/0.1)] transition-shadow">
+                  <p className="text-[13px] font-semibold text-blue-600 mb-1">{title}</p>
+                  <p className="text-[12px] text-gray-500 leading-relaxed">{desc}</p>
+                </a>
+              ))}
+            </div>
+          </div>
+
           <AuthorBox />
         </div>
+      </div>
     </>
   );
 }

@@ -15,8 +15,8 @@ const jsonLd = {
       'headline': 'ARM vs Fixed Rate Mortgage: How to Calculate Which Saves You More',
       'description': 'A complete comparison of adjustable-rate and fixed-rate mortgages including initial savings, rate cap structures, worst-case payment scenarios, and break-even analysis.',
       'datePublished': '2026-05-07',
-      'dateModified': '2026-05-07',
-      'author': { '@type': 'Organization', 'name': 'Truly Free Mortgage' },
+      'dateModified': '2026-05-20',
+      'author': { '@type': 'Person', 'name': 'George Smith', 'url': 'https://www.linkedin.com/in/george-smith-832113217/' },
       'publisher': { '@type': 'Organization', 'name': 'Truly Free Mortgage', 'url': 'https://trulyfreemortgage.com' },
       'mainEntityOfPage': 'https://trulyfreemortgage.com/blog/arm-vs-fixed-rate',
     },
@@ -109,7 +109,7 @@ export default function ARMvsFixedRatePage() {
           </div>
 
           <p className="text-[16px] text-gray-500 leading-relaxed mb-8">
-            An adjustable-rate mortgage offers a lower initial rate in exchange for payment uncertainty after the fixed period ends. Whether that tradeoff makes sense depends entirely on how long you plan to stay, what the rate spread is today, and whether you can absorb worst-case payment increases. Here is how to run the numbers.
+            Lower rate upfront, real risk after year five. That's the deal an ARM offers — and whether it's worth it depends entirely on your timeline, the size of today's rate spread, and whether you could stomach a worst-case payment jump without selling. I've run these numbers for a lot of people. Here's how to do it yourself so you're not guessing.
           </p>
 
           <div className="bg-white rounded-xl p-6 shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)] mb-10">
@@ -246,10 +246,27 @@ export default function ARMvsFixedRatePage() {
               Figures on this page are for educational purposes only. ARM rate adjustments depend on market index movements that cannot be predicted. Worst-case scenarios are illustrative. Truly Free Mortgage Calculator does not collect personal data and does not connect users with lenders.
             </p>
           </div>
-        </div>
-      
+
+          <div className="mt-12 pt-8 border-t border-gray-100">
+            <h2 className="text-[18px] font-bold text-gray-900 mb-4">Related Guides</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {[
+                ['/blog/15-year-vs-30-year-mortgage', '15-Year vs 30-Year Mortgage', '$237,000 difference in total interest on a $300k loan.'],
+                ['/blog/mortgage-refinance-calculator', 'Refinance Calculator', 'Break-even formula, closing costs, when refinancing costs you money.'],
+                ['/blog/mortgage-payoff-calculator', 'Mortgage Payoff Calculator', 'How extra payments shave years off your loan.'],
+                ['/blog/amortization-schedule-generator', 'Amortization Schedule Generator', 'See exactly how every payment breaks down, month by month.'],
+              ].map(([href, title, desc]) => (
+                <a key={String(href)} href={String(href)} className="block bg-white rounded-lg p-4 shadow-[0_2px_4px_-1px_rgb(0_0_0/0.06)] hover:shadow-[0_4px_8px_-2px_rgb(0_0_0/0.1)] transition-shadow">
+                  <p className="text-[13px] font-semibold text-blue-600 mb-1">{title}</p>
+                  <p className="text-[12px] text-gray-500 leading-relaxed">{desc}</p>
+                </a>
+              ))}
+            </div>
+          </div>
+
           <AuthorBox />
         </div>
+      </div>
     </>
   );
 }

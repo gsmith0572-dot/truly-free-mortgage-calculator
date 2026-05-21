@@ -15,8 +15,8 @@ const jsonLd = {
       'headline': 'USDA Rural Home Loan Calculator: Zero Down Payment for Eligible Areas',
       'description': 'A complete guide to USDA loan eligibility, guarantee fees, income limits, and how to calculate your monthly payment with no down payment required.',
       'datePublished': '2026-05-07',
-      'dateModified': '2026-05-07',
-      'author': { '@type': 'Organization', 'name': 'Truly Free Mortgage' },
+      'dateModified': '2026-05-20',
+      'author': { '@type': 'Person', 'name': 'George Smith', 'url': 'https://www.linkedin.com/in/george-smith-832113217/' },
       'publisher': { '@type': 'Organization', 'name': 'Truly Free Mortgage', 'url': 'https://trulyfreemortgage.com' },
       'mainEntityOfPage': 'https://trulyfreemortgage.com/blog/usda-rural-home-loan-calculator',
     },
@@ -109,7 +109,7 @@ export default function USDARuralHomeLoanCalculatorPage() {
           </div>
 
           <p className="text-[16px] text-gray-500 leading-relaxed mb-8">
-            The USDA guaranteed loan program is the most overlooked zero-down mortgage in America. Millions of eligible borrowers never use it because they assume rural means remote farmland. In reality, many suburbs and small cities qualify. Here is how to calculate your payment, verify your eligibility, and understand every fee involved.
+            Most people have never heard of it. That's exactly the problem. The USDA guaranteed loan is a zero-down mortgage available in far more places than you'd expect — we're talking suburbs, small cities, and communities right outside major metro areas. If you've been saving up for a down payment and you qualify, you may not need to wait. Here's how to calculate your payment, confirm your area's eligibility in two minutes, and understand every fee before you talk to a lender.
           </p>
 
           <div className="bg-white rounded-xl p-6 shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)] mb-10">
@@ -240,10 +240,27 @@ export default function USDARuralHomeLoanCalculatorPage() {
               Figures on this page are for educational purposes only. USDA loan eligibility, income limits, and guarantee fees are set by the U.S. Department of Agriculture and subject to change. Consult a USDA-approved lender for loan-specific figures. Truly Free Mortgage Calculator does not collect personal data and does not connect users with lenders.
             </p>
           </div>
-        </div>
-      
+
+          <div className="mt-12 pt-8 border-t border-gray-100">
+            <h2 className="text-[18px] font-bold text-gray-900 mb-4">Related Guides</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {[
+                ['/blog/va-loan-calculator', 'VA Loan Calculator', 'Zero down, no PMI, and rates that beat conventional — for those who qualify.'],
+                ['/blog/fha-mortgage-calculator', 'FHA Mortgage Calculator', 'MIP costs, down payment by credit score, FHA vs conventional.'],
+                ['/blog/amortization-schedule-generator', 'Amortization Schedule Generator', 'See exactly how every payment breaks down, month by month.'],
+                ['/blog/mortgage-payoff-calculator', 'Mortgage Payoff Calculator', 'How extra payments shave years off your loan.'],
+              ].map(([href, title, desc]) => (
+                <a key={String(href)} href={String(href)} className="block bg-white rounded-lg p-4 shadow-[0_2px_4px_-1px_rgb(0_0_0/0.06)] hover:shadow-[0_4px_8px_-2px_rgb(0_0_0/0.1)] transition-shadow">
+                  <p className="text-[13px] font-semibold text-blue-600 mb-1">{title}</p>
+                  <p className="text-[12px] text-gray-500 leading-relaxed">{desc}</p>
+                </a>
+              ))}
+            </div>
+          </div>
+
           <AuthorBox />
         </div>
+      </div>
     </>
   );
 }

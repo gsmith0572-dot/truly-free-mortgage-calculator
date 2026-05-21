@@ -15,8 +15,8 @@ const jsonLd = {
       'headline': 'Investment Property Calculator: Mortgage, Cash Flow, and Returns Explained',
       'description': 'A complete guide to financing investment properties including down payment requirements, rate premiums, cash flow analysis, cap rate, and cash-on-cash return calculations.',
       'datePublished': '2026-05-07',
-      'dateModified': '2026-05-07',
-      'author': { '@type': 'Organization', 'name': 'Truly Free Mortgage' },
+      'dateModified': '2026-05-20',
+      'author': { '@type': 'Person', 'name': 'George Smith', 'url': 'https://www.linkedin.com/in/george-smith-832113217/' },
       'publisher': { '@type': 'Organization', 'name': 'Truly Free Mortgage', 'url': 'https://trulyfreemortgage.com' },
       'mainEntityOfPage': 'https://trulyfreemortgage.com/blog/investment-property-calculator',
     },
@@ -109,7 +109,7 @@ export default function InvestmentPropertyCalculatorPage() {
           </div>
 
           <p className="text-[16px] text-gray-500 leading-relaxed mb-8">
-            Financing an investment property is fundamentally different from financing a primary residence. Higher down payments, rate premiums, stricter reserve requirements, and a completely different set of financial metrics to evaluate the deal. Here is how to calculate your mortgage payment, analyze cash flow, and determine whether a property pencils out before you make an offer.
+            The mortgage is the easy part. It's the cash flow math that trips people up. You're looking at rate premiums of 0.5% to 0.875% over primary residence rates, stricter reserve requirements, and a set of metrics — cap rate, cash-on-cash return — that don't apply to anything else in personal finance. I've seen deals that looked profitable on paper fall apart once you actually model the expenses. Here's how to run the numbers before you make an offer.
           </p>
 
           <div className="bg-white rounded-xl p-6 shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)] mb-10">
@@ -244,10 +244,27 @@ export default function InvestmentPropertyCalculatorPage() {
               Figures on this page are for educational purposes only and do not constitute investment advice. Actual financing terms, rental income, and investment returns vary significantly by market and individual circumstances. Truly Free Mortgage Calculator does not collect personal data and does not connect users with lenders.
             </p>
           </div>
-        </div>
-      
+
+          <div className="mt-12 pt-8 border-t border-gray-100">
+            <h2 className="text-[18px] font-bold text-gray-900 mb-4">Related Guides</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {[
+                ['/blog/jumbo-loan-calculator', 'Jumbo Loan Calculator', 'What changes when your loan exceeds the conforming limit.'],
+                ['/blog/arm-vs-fixed-rate', 'ARM vs Fixed Rate', 'Initial savings vs worst-case payment risk — how to run the numbers.'],
+                ['/blog/mortgage-refinance-calculator', 'Refinance Calculator', 'Break-even formula, closing costs, when refinancing costs you money.'],
+                ['/blog/amortization-schedule-generator', 'Amortization Schedule Generator', 'See exactly how every payment breaks down, month by month.'],
+              ].map(([href, title, desc]) => (
+                <a key={String(href)} href={String(href)} className="block bg-white rounded-lg p-4 shadow-[0_2px_4px_-1px_rgb(0_0_0/0.06)] hover:shadow-[0_4px_8px_-2px_rgb(0_0_0/0.1)] transition-shadow">
+                  <p className="text-[13px] font-semibold text-blue-600 mb-1">{title}</p>
+                  <p className="text-[12px] text-gray-500 leading-relaxed">{desc}</p>
+                </a>
+              ))}
+            </div>
+          </div>
+
           <AuthorBox />
         </div>
+      </div>
     </>
   );
 }

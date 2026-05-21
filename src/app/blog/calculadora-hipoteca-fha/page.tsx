@@ -15,8 +15,8 @@ const jsonLd = {
       'headline': 'Calculadora de Hipoteca FHA: Cómo Calcular Tu Pago Incluyendo el Seguro MIP',
       'description': 'Guía completa sobre los préstamos FHA: requisitos de pago inicial, seguro hipotecario MIP, límites de préstamo 2026 y cómo calcular tu pago mensual exacto.',
       'datePublished': '2026-05-07',
-      'dateModified': '2026-05-07',
-      'author': { '@type': 'Organization', 'name': 'Truly Free Mortgage' },
+      'dateModified': '2026-05-20',
+      'author': { '@type': 'Person', 'name': 'George Smith', 'url': 'https://www.linkedin.com/in/george-smith-832113217/' },
       'publisher': { '@type': 'Organization', 'name': 'Truly Free Mortgage', 'url': 'https://trulyfreemortgage.com' },
       'mainEntityOfPage': 'https://trulyfreemortgage.com/blog/calculadora-hipoteca-fha',
       'inLanguage': 'es',
@@ -110,7 +110,7 @@ export default function CalculadoraHipotecaFHAPage() {
           </div>
 
           <p className="text-[16px] text-gray-500 leading-relaxed mb-8">
-            Los préstamos FHA permiten comprar una vivienda con tan solo 3.5% de pago inicial y puntajes de crédito desde 580. Pero el costo real incluye el seguro hipotecario MIP, que muchos compradores no calculan correctamente. Aquí está todo lo que necesitas saber para calcular tu pago mensual exacto.
+            El 3.5% de pago inicial suena bien. Lo que nadie te dice es que el MIP se queda contigo durante toda la vida del préstamo si no pones el 10%. Eso cambia el cálculo completamente. Muchos compradores no lo anticipan y se sorprenden cuando ven su pago real. Aquí está todo lo que necesitas para calcular tu pago mensual exacto — sin estimaciones vagas, con los números de verdad.
           </p>
 
           <div className="bg-white rounded-xl p-6 shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)] mb-10">
@@ -268,10 +268,27 @@ export default function CalculadoraHipotecaFHAPage() {
               La información en esta página es de carácter educativo. Las tasas MIP, límites de préstamo y requisitos FHA son establecidos por HUD y pueden cambiar. Consulta con un prestamista aprobado por la FHA para cifras específicas a tu situación. Truly Free Mortgage Calculator no recopila datos personales y no conecta usuarios con prestamistas.
             </p>
           </div>
-        </div>
-      
+
+          <div className="mt-12 pt-8 border-t border-gray-100">
+            <h2 className="text-[18px] font-bold text-gray-900 mb-4">Guías Relacionadas</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {[
+                ['/blog/calculadora-amortizacion', 'Calculadora de Amortización', 'Ve cada pago desglosado en capital e interés mes a mes.'],
+                ['/blog/fha-mortgage-calculator', 'Hipoteca FHA en Español', 'MIP, pago inicial por puntaje de crédito, FHA vs convencional en inglés.'],
+                ['/blog/va-loan-calculator', 'Préstamo VA', 'Sin pago inicial, sin PMI — la mejor hipoteca para quienes califican.'],
+                ['/blog/usda-rural-home-loan-calculator', 'Préstamo USDA', 'Cero pago inicial para zonas rurales y suburbanas elegibles.'],
+              ].map(([href, title, desc]) => (
+                <a key={String(href)} href={String(href)} className="block bg-white rounded-lg p-4 shadow-[0_2px_4px_-1px_rgb(0_0_0/0.06)] hover:shadow-[0_4px_8px_-2px_rgb(0_0_0/0.1)] transition-shadow">
+                  <p className="text-[13px] font-semibold text-blue-600 mb-1">{title}</p>
+                  <p className="text-[12px] text-gray-500 leading-relaxed">{desc}</p>
+                </a>
+              ))}
+            </div>
+          </div>
+
           <AuthorBox />
         </div>
+      </div>
     </>
   );
 }

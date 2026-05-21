@@ -15,8 +15,8 @@ const jsonLd = {
       'headline': 'Jumbo Loan Calculator: How to Calculate Payments on High-Balance Mortgages',
       'description': 'A complete guide to jumbo loan limits, qualification requirements, rate premiums, and how to calculate your monthly payment on loans above the conforming limit.',
       'datePublished': '2026-05-07',
-      'dateModified': '2026-05-07',
-      'author': { '@type': 'Organization', 'name': 'Truly Free Mortgage' },
+      'dateModified': '2026-05-20',
+      'author': { '@type': 'Person', 'name': 'George Smith', 'url': 'https://www.linkedin.com/in/george-smith-832113217/' },
       'publisher': { '@type': 'Organization', 'name': 'Truly Free Mortgage', 'url': 'https://trulyfreemortgage.com' },
       'mainEntityOfPage': 'https://trulyfreemortgage.com/blog/jumbo-loan-calculator',
     },
@@ -109,7 +109,7 @@ export default function JumboLoanCalculatorPage() {
           </div>
 
           <p className="text-[16px] text-gray-500 leading-relaxed mb-8">
-            When a loan exceeds the conforming limit set by the Federal Housing Finance Agency it becomes a jumbo loan — and the rules change significantly. No government backing, stricter qualification standards, and a different risk calculus for lenders. Here is how jumbo loans work, what they cost, and how to calculate your payment accurately.
+            Cross the conforming limit by a single dollar and you're in a completely different mortgage market. No Fannie or Freddie backing, stricter underwriting, reserve requirements that catch most borrowers off guard, and rates that don't always behave the way you'd expect. If you're financing above $806,500, here's what's actually different — and how to calculate your payment before lender conversations start.
           </p>
 
           <div className="bg-white rounded-xl p-6 shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1)] mb-10">
@@ -243,10 +243,27 @@ export default function JumboLoanCalculatorPage() {
               Figures on this page are for educational purposes only. Jumbo loan limits, rates, and qualification requirements vary by lender and are subject to change. The 2026 conforming loan limit figures reflect FHFA guidelines. Truly Free Mortgage Calculator does not collect personal data and does not connect users with lenders.
             </p>
           </div>
-        </div>
-      
+
+          <div className="mt-12 pt-8 border-t border-gray-100">
+            <h2 className="text-[18px] font-bold text-gray-900 mb-4">Related Guides</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {[
+                ['/blog/15-year-vs-30-year-mortgage', '15-Year vs 30-Year Mortgage', '$237,000 difference in total interest on a $300k loan.'],
+                ['/blog/investment-property-calculator', 'Investment Property Calculator', 'Mortgage, cash flow, cap rate, and cash-on-cash return explained.'],
+                ['/blog/mortgage-refinance-calculator', 'Refinance Calculator', 'Break-even formula, closing costs, when refinancing costs you money.'],
+                ['/blog/amortization-schedule-generator', 'Amortization Schedule Generator', 'See exactly how every payment breaks down, month by month.'],
+              ].map(([href, title, desc]) => (
+                <a key={String(href)} href={String(href)} className="block bg-white rounded-lg p-4 shadow-[0_2px_4px_-1px_rgb(0_0_0/0.06)] hover:shadow-[0_4px_8px_-2px_rgb(0_0_0/0.1)] transition-shadow">
+                  <p className="text-[13px] font-semibold text-blue-600 mb-1">{title}</p>
+                  <p className="text-[12px] text-gray-500 leading-relaxed">{desc}</p>
+                </a>
+              ))}
+            </div>
+          </div>
+
           <AuthorBox />
         </div>
+      </div>
     </>
   );
 }

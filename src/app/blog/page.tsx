@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Mortgage Guides — Free Education | Truly Free Mortgage',
   description: 'Technical guides on mortgage calculations, loan types, and financing strategy. No fluff. No lead capture. Free forever.',
+  alternates: { canonical: 'https://trulyfreemortgage.com/blog' },
 };
 
 export default function BlogPage() {
